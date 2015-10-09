@@ -76,7 +76,7 @@
             	<li> 
             		<a> Welcome, <?php echo $user_email; ?> </a>
                 <li>    
-                <a href="login.html" >Sign Out</a>
+                <a href="logout.php" >Sign Out</a>
                 </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Sign Up <b class="caret"></b></a>
