@@ -209,7 +209,30 @@
                         <h3> Courses </h3>
                         <a class="btn btn-primary" href="new_course.php">Add Course</a>
                     </div>
-                    
+                    <div class="col-lg-12">
+                        <div class="col-lg-2">
+                            <h3>Admins</h3>
+                            <?php 
+                                $admin = array(); 
+                                $admin_sql = "SELECT email from admin where classname = '$class_user'";
+                                $all_admins = $conn->query($admin_sql);
+                                while($row = $all_admins->fetch_assoc()) {
+                                    $admin[] = $row;
+                                }
+
+                                for($i=count($admin)-1;$i>=0;$i--) {
+                                    echo $admin[$i]['email'];
+                                    echo "<br>";
+                                }
+                            ?>
+                        </div>
+                        <div class="col-lg-2">
+                            <br>
+                            <br>
+
+                            <a href="new_admin.php" class="btn btn-primary">Add admin</a>
+                        </div>
+                    </div>
                 </div>
                 <!-- /.row -->
             </div>
