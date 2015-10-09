@@ -15,7 +15,7 @@
 
     if(!isset($_SESSION['user']))
     {
-        header("Location: signup.php");
+        header("Location: login.html");
     }
     $user_email = $_SESSION['user'];
 
