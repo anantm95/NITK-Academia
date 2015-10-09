@@ -82,20 +82,20 @@
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
+                    <li>
+                        <a href="index.php"><i class="fa fa-fw fa-dashboard"></i> Home</a>
+                    </li>
                     <li class="active">
-                        <a href="index.html"><i class="fa fa-fw fa-dashboard"></i> Home</a>
+                        <a href="courses.php"><i class="fa fa-fw fa-table"></i> Courses</a>
                     </li>
                     <li>
-                        <a href="courses.html"><i class="fa fa-fw fa-table"></i> Courses</a>
+                        <a href="voting.php"><i class="fa fa-fw fa-desktop"></i> Voting</a>
                     </li>
                     <li>
-                        <a href="voting.html"><i class="fa fa-fw fa-desktop"></i> Voting</a>
+                        <a href="groups.php"><i class="fa fa-fw fa-edit"></i> Groups</a>
                     </li>
                     <li>
-                        <a href="groups.html"><i class="fa fa-fw fa-edit"></i> Groups</a>
-                    </li>
-                    <li>
-                        <a href="track.html"><i class="fa fa-fw fa-bar-chart"></i> Tracking</a>
+                        <a href="track.php"><i class="fa fa-fw fa-bar-chart"></i> Tracking</a>
                     </li>
                 </ul>
             </div>

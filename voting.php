@@ -1,3 +1,26 @@
+<?php
+    session_start();
+
+    $servername = "localhost";
+    $username = "root";
+    $password = "password";
+    $dbname = "academia";
+
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    if(!isset($_SESSION['user']))
+    {
+        header("Location: login.html");
+    }
+    $user_email = $_SESSION['user'];
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +32,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin - Bootstrap Admin Template</title>
+    <title>NITK Academia</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -19,13 +42,6 @@
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
 
 </head>
 
@@ -43,42 +59,33 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">NITK Academia</a>
+                <a class="navbar-brand" href="index.php">NITK Academia</a>
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
+                <li> 
+                    <a> Welcome, <?php echo $user_email; ?> </a>
                 <li>    
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Log In</a>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Sign Up <b class="caret"></b></a>
-                    <ul class="dropdown-menu" style="width:200px;">
-                        <li>
-                            <a href="#"><i class="fa fa-fw fa-user"></i> As Student</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-fw fa-user"></i> As Representative</a>
-                        </li>
-                    </ul>
+                <a href="logout.php" >Sign Out</a>
                 </li>
             </ul>
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
                     <li>
-                        <a href="index.html"><i class="fa fa-fw fa-dashboard"></i> Home</a>
+                        <a href="index.php"><i class="fa fa-fw fa-dashboard"></i> Home</a>
+                    </li>
+                    <li class="active">
+                        <a href="courses.php"><i class="fa fa-fw fa-table"></i> Courses</a>
                     </li>
                     <li>
-                        <a href="courses.html"><i class="fa fa-fw fa-table"></i> Courses</a>
+                        <a href="voting.php"><i class="fa fa-fw fa-desktop"></i> Voting</a>
                     </li>
                     <li>
-                        <a href="voting.html"><i class="fa fa-fw fa-desktop"></i> Voting</a>
+                        <a href="groups.php"><i class="fa fa-fw fa-edit"></i> Groups</a>
                     </li>
                     <li>
-                        <a href="groups.html"><i class="fa fa-fw fa-edit"></i> Groups</a>
-                    </li>
-                    <li>
-                        <a href="track.html"><i class="fa fa-fw fa-bar-chart"></i> Tracking</a>
+                        <a href="track.php"><i class="fa fa-fw fa-bar-chart"></i> Tracking</a>
                     </li>
                 </ul>
             </div>

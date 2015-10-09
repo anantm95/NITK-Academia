@@ -1,3 +1,26 @@
+<?php
+    session_start();
+
+    $servername = "localhost";
+    $username = "root";
+    $password = "password";
+    $dbname = "academia";
+
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    if(!isset($_SESSION['user']))
+    {
+        header("Location: login.html");
+    }
+    $user_email = $_SESSION['user'];
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -50,19 +73,19 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
                     <li>
-                        <a href="index.html"><i class="fa fa-fw fa-dashboard"></i> Home</a>
-                    </li>
-                    <li>
-                        <a href="courses.html"><i class="fa fa-fw fa-table"></i> Courses</a>
+                        <a href="index.php"><i class="fa fa-fw fa-dashboard"></i> Home</a>
                     </li>
                     <li class="active">
-                        <a href="voting.html"><i class="fa fa-fw fa-desktop"></i> Voting</a>
+                        <a href="courses.php"><i class="fa fa-fw fa-table"></i> Courses</a>
                     </li>
                     <li>
-                        <a href="groups.html"><i class="fa fa-fw fa-edit"></i> Groups</a>
+                        <a href="voting.php"><i class="fa fa-fw fa-desktop"></i> Voting</a>
                     </li>
                     <li>
-                        <a href="track.html"><i class="fa fa-fw fa-bar-chart"></i> Tracking</a>
+                        <a href="groups.php"><i class="fa fa-fw fa-edit"></i> Groups</a>
+                    </li>
+                    <li>
+                        <a href="track.php"><i class="fa fa-fw fa-bar-chart"></i> Tracking</a>
                     </li>
                 </ul>
             </div>
@@ -73,6 +96,7 @@
 
             <div class="container-fluid">
 
+                
             </div>
             <!-- /.container-fluid -->
 
