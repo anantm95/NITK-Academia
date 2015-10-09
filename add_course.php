@@ -1,4 +1,3 @@
-
 <?php
 
 	session_start();
@@ -24,10 +23,11 @@
 
 	if(isset($_POST['submit']))
 	{
-		$announcement = $_POST['ann'];
+		$course_code = $_POST['course_code'];
+		$course_name = $_POST['course_name'];
 
 
-		$sql1 = "INSERT INTO announcement (classname, announcement) VALUES ('$class_user', '$announcement')";
+		$sql1 = "INSERT INTO course (classname, course_code, course_name) VALUES ('$class_user', '$course_code', '$course_name')";
 		$result = $conn->query($sql1);
 
 		if(result == TRUE)
@@ -38,4 +38,3 @@
 
 	$conn->close();
 ?>
-

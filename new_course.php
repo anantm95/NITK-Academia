@@ -1,3 +1,38 @@
+<?php
+    session_start();
+
+    $servername = "localhost";
+    $username = "root";
+    $password = "password";
+    $dbname = "academia";
+
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    if(!isset($_SESSION['user']))
+    {
+        header("Location: login.html");
+    }
+    $user_email = $_SESSION['user'];
+
+    $sql1 = "SELECT classname from user where email = '$user_email'";
+    $result = $conn->query($sql1);
+    $result_array = $result->fetch_assoc();
+    $class_user = $result_array["classname"];
+
+    $sql2 = "SELECT email from admin where classname = '$class_user' and email = '$user_email'";
+    $result2 = $conn->query($sql2);
+    if($result2->num_rows > 0)
+        $is_admin = 1;
+    else
+        $is_admin = 0;
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -50,16 +85,10 @@
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Sign Up <b class="caret"></b></a>
-                    <ul class="dropdown-menu" style="width:200px;">
-                        <li>
-                            <a href="student-signup.html"><i class="fa fa-fw fa-user"></i> As Student</a>
-                        </li>
-                        <li>
-                            <a href="cr-signup.html"><i class="fa fa-fw fa-user"></i> As Representative</a>
-                        </li>
-                    </ul>
+                <li> 
+                    <a> Welcome, <?php echo $user_email; ?> </a>
+                <li>    
+                <a href="logout.php">Sign Out</a>
                 </li>
             </ul>
             <!-- /.navbar-collapse -->
@@ -69,14 +98,18 @@
                 <div style="margin-top:50px;" class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
                     <div class="login-panel panel panel-default">
                         <div class="panel-heading">
-                            <h3 class="panel-title">Add General Annoucement</h3>
+                            <h3 class="panel-title">Add Course</h3>
                         </div>
                         <div class="panel-body">
-                            <form role="form" action = "add_announcement.php" method="post">
+                            <form role="form" action = "add_course.php" method="post">
                                 <fieldset>
                                     <div class="form-group">
-                                        <label for="inputann">Announcement</label>
-                                        <textarea class="form-control" placeholder="Please enter the announcement" name="ann" type="text"></textarea>
+                                        <label for="inputcoursecode">Course Code</label>
+                                        <input class="form-control" placeholder="Please enter the course code" name="course_code" type="text">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputcoursename">Course Name</label>
+                                        <input class="form-control" placeholder="Please enter the course name" name="course_name" type="text">
                                     </div>
 
                                     <button type="submit" id="submit" name="submit" class="btn btn-lg btn-success btn-block">Save</button>

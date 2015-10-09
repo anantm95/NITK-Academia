@@ -204,8 +204,12 @@
                     </div>
                     <div class="col-lg-4">
                     	<h3> General Announcements </h3>
-                    	<a class="btn btn-primary" href="add_announcement.html">Add announcement</a>
+                    	<a class="btn btn-primary" href="new_announcement.php">Add announcement</a>
+                        <br>
+                        <h3> Courses </h3>
+                        <a class="btn btn-primary" href="new_course.php">Add Course</a>
                     </div>
+                    
                 </div>
                 <!-- /.row -->
             </div>
