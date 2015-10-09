@@ -77,7 +77,7 @@
                             <h3 class="panel-title">Sign Up as Representative</h3>
                         </div>
                         <div class="panel-body">
-                            <form role="form">
+                            <form role="form" method="post" action="cr-signup.php">
                                 <fieldset>
                                     <div class="form-group">
                                         <label for="inputclassname">Class Name</label>
@@ -91,8 +91,9 @@
                                         <label for="inputpassword">Password</label>
                                         <input class="form-control" placeholder="Please enter your password" name="password" type="password" value="">
                                     </div>
-                                    <!-- Change this to a button or input when using this as a form -->
-                                    <a href="index.html" class="btn btn-lg btn-success btn-block">Sign Up</a>
+                                    
+                                    <button id="submit" name="submit" type="submit" class="btn btn-lg btn-success btn-block">Sign Up</button>
+                                    
                                 </fieldset>
                             </form>
                         </div>

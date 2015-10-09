@@ -78,17 +78,6 @@
                 <li>    
                 <a href="logout.php" >Sign Out</a>
                 </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Sign Up <b class="caret"></b></a>
-                    <ul class="dropdown-menu" style="width:200px;">
-                        <li>
-                            <a href="student-signup.html"><i class="fa fa-fw fa-user"></i> As Student</a>
-                        </li>
-                        <li>
-                            <a href="cr-signup.html"><i class="fa fa-fw fa-user"></i> As Representative</a>
-                        </li>
-                    </ul>
-                </li>
             </ul>
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
