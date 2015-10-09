@@ -17,7 +17,6 @@
     {
         header("Location: signup.php");
     }
-
     $user_email = $_SESSION['user'];
 
 ?>
@@ -74,8 +73,10 @@
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
+            	<li> 
+            		<a> Welcome, <?php echo $user_email; ?> </a>
                 <li>    
-                <a href="login.html" >Log In</a>
+                <a href="login.html" >Sign Out</a>
                 </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Sign Up <b class="caret"></b></a>
@@ -89,9 +90,6 @@
                     </ul>
                 </li>
             </ul>
-            <?php
-            	echo '$user_email';
-            ?>
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
