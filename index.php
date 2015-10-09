@@ -219,7 +219,7 @@
                                 echo "No annoucements";
                             else
                             { 
-                                for($i=count($ann);$i>=count($ann)-5;$i--   ) {
+                                for($i=count($ann)-1;$i>=count($ann)-5;$i--   ) {
                                     echo $ann[$i]['announcement'];
                                     echo "<br>";
                                 }

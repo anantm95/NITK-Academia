@@ -115,6 +115,29 @@
         <div id="page-wrapper">
 
             <div class="container-fluid">
+                <?php
+
+                    $course = array(); 
+                    $course_sql = "SELECT * from course where classname = '$class_user'";
+                    $all_courses = $conn->query($course_sql);
+                    while($row = $all_courses->fetch_assoc()) {
+                        $course[] = $row;
+                    }
+
+
+                    if(count($course) == 0)
+                        echo "No courses have been added";
+                    else
+                    { 
+                        for($i=count($course)-1;$i>=0;$i--) {
+                            echo $course[$i]['course_code'];
+                            echo "<br>";
+                            echo $course[$i]['course_name'];
+                            echo "<br><br>";
+                        }
+                    }
+                
+                ?>
 
             </div>
             <!-- /.container-fluid -->
