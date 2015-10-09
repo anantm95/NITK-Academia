@@ -204,10 +204,22 @@
                     </div>
                     <div class="col-lg-4">
                     	<h3> General Announcements </h3>
-                    	<ul>
-                    	<li> blah </li>
-                    	<li> bluh </li>
-                    	<li> bleh </li>
+                    	
+                        <?php
+
+                            $ann = array(); 
+                            $ann_sql = "SELECT announcement from announcement where classname = '$class_user'";
+                            $all_ann = $conn->query($ann_sql);
+                            while($row = $all_ann->fetch_assoc()) {
+                                $ann[] = $row;
+                            }
+
+                            for($i=count($ann);$i>=count($ann)-5;$i--) {
+                                echo $ann[$i]['announcement'];
+                                echo "<br>";
+                            }
+                            
+                        ?>
                     </div>
                 </div>
                 <!-- /.row -->
