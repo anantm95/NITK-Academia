@@ -75,13 +75,13 @@
                     <li>
                         <a href="index.php"><i class="fa fa-fw fa-dashboard"></i> Home</a>
                     </li>
-                    <li class="active">
+                    <li>
                         <a href="courses.php"><i class="fa fa-fw fa-table"></i> Courses</a>
                     </li>
                     <li>
                         <a href="voting.php"><i class="fa fa-fw fa-desktop"></i> Voting</a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="groups.php"><i class="fa fa-fw fa-edit"></i> Groups</a>
                     </li>
                     <li>
