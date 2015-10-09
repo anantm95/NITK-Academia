@@ -19,6 +19,18 @@
     }
     $user_email = $_SESSION['user'];
 
+    $sql1 = "SELECT classname from user where email = '$user_email'";
+    $result = $conn->query($sql1);
+    $result_array = $result->fetch_assoc();
+    $class_user = $result_array["classname"];
+
+    $sql2 = "SELECT email from admin where classname = '$class_user' and email = '$user_email'";
+    $result2 = $conn->query($sql2);
+    if($result2->num_rows > 0)
+        $is_admin = 1;
+    else
+        $is_admin = 0;
+
 ?>
 
 <!DOCTYPE html>
@@ -76,7 +88,7 @@
             	<li> 
             		<a> Welcome, <?php echo $user_email; ?> </a>
                 <li>    
-                <a href="logout.php" >Sign Out</a>
+                <a href="logout.php">Sign Out</a>
                 </li>
             </ul>
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
@@ -97,6 +109,12 @@
                     <li>
                         <a href="track.php"><i class="fa fa-fw fa-bar-chart"></i> Tracking</a>
                     </li>
+                    <?php if($is_admin): ?> 
+                    <li>
+                        <a href="admin.php"><i class="fa fa-fw fa-dashboard"></i> Admin</a>
+                    </li>
+                    <?php endif ?>
+                    
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
