@@ -30,7 +30,7 @@
 		$sql1 = "INSERT INTO course (classname, course_code, course_name) VALUES ('$class_user', '$course_code', '$course_name')";
 		$result = $conn->query($sql1);
 
-		if(result == TRUE)
+		if($result == TRUE)
 		header("Location: admin.php");
 		
 	}
