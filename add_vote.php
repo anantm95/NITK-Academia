@@ -23,15 +23,20 @@
 
 	if(isset($_POST['submit']))
 	{
-		$course_code = $_POST['course_code'];
-		$course_name = $_POST['course_name'];
+		$num_options = $_POST['num_options'];
+		$vote_title = $_POST['vote_title'];
 
+		echo "hello";
+		echo $num_options;
+		echo $vote_title;
+		$new = $_POST['1'];
+		
+		for($i=0;$i<$num_options;$i++)
+		{
+			
+		}
 
-		$sql1 = "INSERT INTO course (classname, course_code, course_name) VALUES ('$class_user', '$course_code', '$course_name')";
-		$result = $conn->query($sql1);
-
-		if($result == TRUE)
-		header("Location: admin.php");
+		echo $new;
 		
 	}
 
