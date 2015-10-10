@@ -205,9 +205,17 @@
                     <div class="col-lg-4">
                     	<h3> General Announcements </h3>
                     	<a class="btn btn-primary" href="new_announcement.php">Add announcement</a>
+                        
                         <br>
+                        
                         <h3> Courses </h3>
                         <a class="btn btn-primary" href="new_course.php">Add Course</a>
+
+                        <br>
+
+                        <h3>Voting</h3>
+                        <a class="btn btn-primary" href="new_vote_step1.php">Set Up a Vote</a>
+
                     </div>
                     <div class="col-lg-12">
                         <div class="col-lg-2">
@@ -225,13 +233,10 @@
                                     echo "<br>";
                                 }
                             ?>
-                        </div>
-                        <div class="col-lg-2">
                             <br>
-                            <br>
-
                             <a href="new_admin.php" class="btn btn-primary">Add admin</a>
                         </div>
+                        
                     </div>
                 </div>
                 <!-- /.row -->

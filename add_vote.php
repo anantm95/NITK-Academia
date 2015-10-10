@@ -23,7 +23,7 @@
 
 	if(isset($_POST['submit']))
 	{
-		$course_code = $_POST['vote_title'];
+		$course_code = $_POST['course_code'];
 		$course_name = $_POST['course_name'];
 
 
