@@ -90,7 +90,7 @@
                     <li>
                         <a href="index.php"><i class="fa fa-fw fa-dashboard"></i> Home</a>
                     </li>
-                    <li class="active">
+                    <li>
                         <a href="courses.php"><i class="fa fa-fw fa-table"></i> Courses</a>
                     </li>
                     <li>
@@ -103,7 +103,7 @@
                         <a href="track.php"><i class="fa fa-fw fa-bar-chart"></i> Tracking</a>
                     </li>
                     <?php if($is_admin): ?> 
-                    <li>
+                    <li class="active">
                         <a href="admin.php"><i class="fa fa-fw fa-dashboard"></i> Admin</a>
                     </li>
                     <?php endif ?>
@@ -126,10 +126,12 @@
                     $course_name = $result_assoc["course_name"];
 
                     echo "<h2>".$code." - ".$course_name."</h2>";
-                
+
+                    echo "<h3>Announcements</h3>";
+                    echo "<a class='btn btn-primary' href='new_course_announcement.php?code=".$code."'>Add announcement</a>";
                 ?>
 
-                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
             </div>
             <!-- /.container-fluid -->
