@@ -236,6 +236,31 @@
                             <br>
                             <a href="new_admin.php" class="btn btn-primary">Add admin</a>
                         </div>
+                        <div class="col-lg-6">
+                            <?php
+
+                                $course = array(); 
+                                $course_sql = "SELECT * from course where classname = '$class_user'";
+                                $all_courses = $conn->query($course_sql);
+                                while($row = $all_courses->fetch_assoc()) {
+                                    $course[] = $row;
+                                }
+
+
+                                if(count($course) == 0)
+                                    echo "No courses have been added";
+                                else
+                                { 
+                                    for($i=count($course)-1;$i>=0;$i--) {
+                                        echo $course[$i]['course_code'];
+                                        echo "<br>";
+                                        echo "<a href='course_admin.php?code=".$course[$i]['course_code']."'>".$course[$i]['course_name']."</a>";
+                                        echo "<br><br>";
+                                    }
+                                }
+                
+                            ?>
+                        </div>
                         
                     </div>
                 </div>
