@@ -132,7 +132,7 @@
                         for($i=count($course)-1;$i>=0;$i--) {
                             echo $course[$i]['course_code'];
                             echo "<br>";
-                            echo $course[$i]['course_name'];
+                            echo "<a href='course_detail.php?code=".$course[$i]['course_code']."'>".$course[$i]['course_name']."</a>";
                             echo "<br><br>";
                         }
                     }
