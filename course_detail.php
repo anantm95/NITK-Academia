@@ -126,6 +126,26 @@
                     $course_name = $result_assoc["course_name"];
 
                     echo "<h2>".$code." - ".$course_name."</h2>";
+
+                    echo "<h3>Announcements</h3>";
+
+                    $course_ann = array(); 
+                    $course_ann_sql = "SELECT * from course_announcement where course_code = '$code'";
+                    $all_course_ann = $conn->query($course_ann_sql);
+                    while($row = $all_course_ann->fetch_assoc()) {
+                        $course_ann[] = $row;
+                    }
+
+
+                    if(count($course_ann) == 0)
+                        echo "No annoucements";
+                    else
+                    { 
+                        for($i=count($course_ann)-1;$i>=0;$i--) {
+                            echo $course_ann[$i]['announcement'];
+                            echo "<br>";
+                        }
+                    }
                 
                 ?>
 
