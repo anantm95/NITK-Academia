@@ -25,16 +25,15 @@
 	{
 		$num_options = $_POST['num_options'];
 		$vote_title = $_POST['vote_title'];
+	
+		$sql1 = "CREATE TABLE vote (classname VARCHAR(15) default ".$class_user.", vote_title VARCHAR(200))";
+		$result1 = $conn->query($sql1);
 
-		echo "hello";
-		echo $num_options;
-		echo $vote_title;
-		$new = $_POST['0'];
-		
 		for($i=0;$i<$num_options;$i++)
-		{
-			
+		{	
+			$sql2 = "ALTER TABLE vote ADD "
 		}
+						
 
 		echo $new;
 		

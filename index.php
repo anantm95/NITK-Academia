@@ -118,7 +118,12 @@
             <div class="container-fluid">
 
                 <div class="row">
+                    <div class="col-lg-12">
+                        <?php echo "<h1>Hello! Welcome to your class group, ".$class_user."";?>
+                    </div>
+
                     <div class="col-lg-8">
+                        <br><br>
                         <h2>Time Table</h2>
                         <div class="table-responsive">
                             <table class="table table-bordered table-hover table-striped">
@@ -196,6 +201,8 @@
                         </div>
                     </div>
                     <div class="col-lg-4">
+                        <br>
+                        <br>
                     	<h3> General Announcements </h3>
                     	
                         <?php
@@ -212,13 +219,31 @@
                                 echo "No annoucements";
                             else
                             { 
-                                for($i=count($ann)-1;$i>=count($ann)-5;$i--   ) {
+                                for($i=count($ann)-1;$i>=count($ann)-10;$i--   ) {
                                     echo $ann[$i]['announcement'];
                                     echo "<br>";
                                 }
                             }
                             
                         ?>
+                    </div>
+                    <div class="col-lg-12">
+                        <br>
+                        <br>
+                        <?php
+                            echo "<h2>".$class_user."'s Representatives</h2>";
+                            $admin = array(); 
+                            $admin_sql = "SELECT email from admin where classname = '$class_user'";
+                            $all_admins = $conn->query($admin_sql);
+                            while($row = $all_admins->fetch_assoc()) {
+                                $admin[] = $row;
+                            }
+
+                            for($i=count($admin)-1;$i>=0;$i--) {
+                                echo $admin[$i]['email'];
+                                echo "<br>";
+                            }
+                        ?> 
                     </div>
                 </div>
                 <!-- /.row -->
