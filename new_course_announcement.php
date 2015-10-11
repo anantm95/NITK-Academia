@@ -97,7 +97,7 @@
                             <?php echo "<h3 class='panel-title'>Add Announcement - ".$code."</h3>"; ?>
                         </div>
                         <div class="panel-body">
-                            <?php echo "<form role='form' action = 'add_course_announcement.php?code=".$code." method='post'>"; ?>
+                            <?php echo "<form role='form' action = 'add_course_announcement.php?code=".$code."' method='post'>"; ?>
                                 <fieldset>
                                     <div class="form-group">
                                         <label for="inputcourseann">Announcement</label>
