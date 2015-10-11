@@ -29,7 +29,7 @@
 		echo "hello";
 		echo $num_options;
 		echo $vote_title;
-		$new = $_POST['1'];
+		$new = $_POST['0'];
 		
 		for($i=0;$i<$num_options;$i++)
 		{

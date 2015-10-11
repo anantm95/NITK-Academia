@@ -141,7 +141,7 @@
                         echo "No annoucements";
                     else
                     { 
-                        for($i=count($course_ann)-1;$i>=0;$i--) {
+                        for($i=count($course_ann)-1;$i>=count($course_ann)-5;$i--) {
                             echo $course_ann[$i]['announcement'];
                             echo "<br>";
                         }

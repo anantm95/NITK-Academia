@@ -101,7 +101,7 @@
                                     	{ ?>
                                     	<div class="form-group">
                                     	<label>Option <?php echo $i+1 ?></label>
-                                    	<?php echo "<input class='form-control' placeholder='Please enter option description' <name=".$i." type='text'>" ?>
+                                    	<?php echo "<input class='form-control' placeholder='Please enter option description' name=".$i." type='text'>" ?>
                                     	</div>
                                     <?php } ?>
 
