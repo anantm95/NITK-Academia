@@ -146,58 +146,58 @@
                                 <tbody>
                                     <tr>
                                         <td>Monday</td>
-                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="mon1" value="hello" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="mon2" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="mon3" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="mon4" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="mon5" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="mon6" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="mon7" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="mon8" style="width:80px;"></td>
                                     </tr>
                                     <tr>
                                         <td>Tuesday</td>
-                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="tue1" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="tue2" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="tue3" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="tue4" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="tue5" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="tue6" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="tue7" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="tue8" style="width:80px;"></td>
                                     </tr>
                                     <tr>
                                         <td>Wednesday</td>
-                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="wed1" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="wed2" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="wed3" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="wed4" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="wed5" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="wed6" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="wed7" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="wed8" style="width:80px;"></td>
                                     </tr>
                                     <tr>
                                         <td>Thursday</td>
-                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="thu1" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="thu2" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="thu3" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="thu4" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="thu5" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="thu6" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="thu7" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="thu8" style="width:80px;"></td>
                                     </tr>
                                     <tr>
                                         <td>Friday</td>
-                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="fri1" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="fri2" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="fri3" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="fri4" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="fri5" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="fri6" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="fri7" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="fri8" style="width:80px;"></td>
                                     </tr>
                                 </tbody>
                             </table>
