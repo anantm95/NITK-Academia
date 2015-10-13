@@ -68,14 +68,18 @@
 		$fri7 = $_POST['fri7'];
 		$fri8 = $_POST['fri8'];
 
-		$sql1 = "INSERT INTO time_table (classname, mon1, mon2, mon3, mon4, mon5, mon6, mon7, mon8, tue1, tue2, tue3, tue4, tue5, tue6, tue7, tue8, wed1, wed2, wed3, wed4, wed5, wed6, wed7,wed8, thu1, thu2, thu3, thu4, thu5, thu6, thu7, thu8, fri1, fri2, fri3, fri4, fri5, fri5, fri6, fri7, fri8) VALUES ('$class_user', '$mon1', '$mon2', '$mon3', '$mon4', '$mon5', '$mon6', '$mon7', '$mon8', '$tue1', '$tue2', '$tue3', '$tue4', '$tue5', '$tue6', '$tue7', '$tue8', '$wed1', '$wed2', '$wed3', '$wed4', '$wed5', '$wed6', '$wed7', '$wed8', '$thu1', '$thu2', '$thu3', '$thu4', '$thu5', '$thu6', '$thu7', '$thu8', '$fri1', '$fri2', '$fri3', '$fri4', '$fri5', '$fri6', '$fri7', '$fri8')";
+		echo $fri8;
 
-		$result =$conn->query($sql1);  
+		$sql1 = "INSERT INTO time_table (classname, mon1, mon2, mon3, mon4, mon5, mon6, mon7, mon8, tue1, tue2, tue3, tue4, tue5, tue6, tue7, tue8, wed1, wed2, wed3, wed4, wed5, wed6, wed7, wed8, thu1, thu2, thu3, thu4, thu5, thu6, thu7, thu8, fri1, fri2, fri3, fri4, fri5, fri6, fri7, fri8) VALUES ('$class_user', '$mon1', '$mon2', '$mon3', '$mon4', '$mon5', '$mon6', '$mon7', '$mon8', '$tue1', '$tue2', '$tue3', '$tue4', '$tue5', '$tue6', '$tue7', '$tue8', '$wed1', '$wed2', '$wed3', '$wed4', '$wed5', '$wed6', '$wed7', '$wed8', '$thu1', '$thu2', '$thu3', '$thu4', '$thu5', '$thu6', '$thu7', '$thu8', '$fri1', '$fri2', '$fri3', '$fri4', '$fri5', '$fri6', '$fri7', '$fri8')";
+
+		$result=$conn->query($sql1);  
 
 		if($result == TRUE)
 		{
 			header("Location: admin.php");
 		}
+		else
+		echo "hello";
 	}
 
 
