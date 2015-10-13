@@ -112,7 +112,8 @@
         <div id="page-wrapper">
 
             <div class="container-fluid">
-
+            <h3>Attendance Tracker</h3>
+            
             </div>
             <!-- /.container-fluid -->
 

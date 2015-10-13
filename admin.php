@@ -217,9 +217,37 @@
                         <a class="btn btn-primary" href="new_vote_step1.php">Set Up a Vote</a>
 
                     </div>
+
                     <div class="col-lg-12">
-                        <div class="col-lg-2">
-                            <h3>Admins</h3>
+                    <?php
+
+                        $course = array(); 
+                        $course_sql = "SELECT * from course where classname = '$class_user'";
+                        $all_courses = $conn->query($course_sql);
+                        while($row = $all_courses->fetch_assoc()) {
+                            $course[] = $row;
+                        }
+
+
+                        if(count($course) == 0)
+                            echo "No courses have been added";
+                        else
+                        { 
+                            for($i=count($course)-1;$i>=0;$i--) {
+                            echo "<div class='col-lg-5' style='background-color:#B1c5cF; margin-right:30px; margin-left:45px; margin-bottom:20px; margin-top:20px; text-align:center;'";
+                            echo "<br>";
+                            echo "<h3>".$course[$i]['course_code']."</h3>";
+                            echo "<h4><a href='course_detail.php?code=".$course[$i]['course_code']."'>".$course[$i]['course_name']."</a></h4>";
+                            echo "<br>";
+                            echo "</div>";
+                        }
+                        }
+        
+                    ?>
+                    </div>
+
+                    <div class="col-lg-12">
+                    <h3>Admins</h3>
                             <?php 
                                 $admin = array(); 
                                 $admin_sql = "SELECT email from admin where classname = '$class_user'";
@@ -235,33 +263,7 @@
                             ?>
                             <br>
                             <a href="new_admin.php" class="btn btn-primary">Add admin</a>
-                        </div>
-                        <div class="col-lg-6">
-                            <?php
-
-                                $course = array(); 
-                                $course_sql = "SELECT * from course where classname = '$class_user'";
-                                $all_courses = $conn->query($course_sql);
-                                while($row = $all_courses->fetch_assoc()) {
-                                    $course[] = $row;
-                                }
-
-
-                                if(count($course) == 0)
-                                    echo "No courses have been added";
-                                else
-                                { 
-                                    for($i=count($course)-1;$i>=0;$i--) {
-                                        echo $course[$i]['course_code'];
-                                        echo "<br>";
-                                        echo "<a href='course_admin.php?code=".$course[$i]['course_code']."'>".$course[$i]['course_name']."</a>";
-                                        echo "<br><br>";
-                                    }
-                                }
-                
-                            ?>
-                        </div>
-                        
+                    </div>
                     </div>
                 </div>
                 <!-- /.row -->
