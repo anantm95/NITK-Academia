@@ -151,7 +151,7 @@
 
                                 echo "<tbody>
                                     <tr>
-                                        <td>Monday</td>
+                                        <td><b>Monday</b></td>
                                         <td style='width:100px;'><input type='text' name='mon1' value=".$tt_result_assoc["mon1"]." style='width:80px;'></td>
                                         <td style='width:100px;'><input type='text' name='mon2' value=".$tt_result_assoc["mon2"]." style='width:80px;'></td>
                                         <td style='width:100px;'><input type='text' name='mon3' value=".$tt_result_assoc["mon3"]." style='width:80px;'></td>
@@ -162,7 +162,7 @@
                                         <td style='width:100px;'><input type='text' name='mon8' value=".$tt_result_assoc["mon8"]." style='width:80px;'></td>
                                     </tr>
                                     <tr>
-                                        <td>Tuesday</td>
+                                        <td><b>Tuesday</b></td>
                                         <td style='width:100px;'><input type='text' name='tue1' value=".$tt_result_assoc["tue1"]." style='width:80px;'></td>
                                         <td style='width:100px;'><input type='text' name='tue2' value=".$tt_result_assoc["tue2"]." style='width:80px;'></td>
                                         <td style='width:100px;'><input type='text' name='tue3' value=".$tt_result_assoc["tue3"]." style='width:80px;'></td>
@@ -173,7 +173,7 @@
                                         <td style='width:100px;'><input type='text' name='tue8' value=".$tt_result_assoc["tue8"]." style='width:80px;'></td>
                                     </tr>
                                     <tr>
-                                        <td>Wednesday</td>
+                                        <td><b>Wednesday</b></td>
                                         <td style='width:100px;'><input type='text' name='wed1' value=".$tt_result_assoc["wed1"]." style='width:80px;'></td>
                                         <td style='width:100px;'><input type='text' name='wed2' value=".$tt_result_assoc["wed2"]." style='width:80px;'></td>
                                         <td style='width:100px;'><input type='text' name='wed3' value=".$tt_result_assoc["wed3"]." style='width:80px;'></td>
@@ -184,7 +184,7 @@
                                         <td style='width:100px;'><input type='text' name='wed8' value=".$tt_result_assoc["wed8"]." style='width:80px;'></td>
                                     </tr>
                                     <tr>
-                                        <td>Thursday</td>
+                                        <td><b>Thursday</b></td>
                                         <td style='width:100px;'><input type='text' name='thu1' value=".$tt_result_assoc["thu1"]." style='width:80px;'></td>
                                         <td style='width:100px;'><input type='text' name='thu2' value=".$tt_result_assoc["thu2"]." style='width:80px;'></td>
                                         <td style='width:100px;'><input type='text' name='thu3' value=".$tt_result_assoc["thu3"]." style='width:80px;'></td>
@@ -195,7 +195,7 @@
                                         <td style='width:100px;'><input type='text' name='thu8' value=".$tt_result_assoc["thu8"]." style='width:80px;'></td>
                                     </tr>
                                     <tr>
-                                        <td>Friday</td>
+                                        <td><b>Friday</b></td>
                                         <td style='width:100px;'><input type='text' name='fri1' value=".$tt_result_assoc["fri1"]." style='width:80px;'></td>
                                         <td style='width:100px;'><input type='text' name='fri2' value=".$tt_result_assoc["fri2"]." style='width:80px;'></td>
                                         <td style='width:100px;'><input type='text' name='fri3' value=".$tt_result_assoc["fri3"]." style='width:80px;'></td>
@@ -207,12 +207,15 @@
                                     </tr>
                                 </tbody>" ?>
                             </table>
-                            <button type="submit" name="submit" id="submit" class="btn btn-success" style="width:150px;">Save</button>
+                            <button type="submit" name="submit" id="submit" class="btn btn-success" style="width:150px; float: right;">Save</button>
                         </form>
                         </div>
                     </div>
 
                     <div class="col-lg-12">
+                    <br>
+                    <h2>Courses &nbsp;&nbsp;<a class="btn btn-primary" href="new_course.php">Add Course</a></h2>
+                    <br>
                     <?php
 
                         $course = array(); 
@@ -242,7 +245,7 @@
 
                     <div class="col-lg-12">
                         
-                        <div class="col-lg-4">
+                        <div class="col-lg-5" style="margin-right:30px; margin-left:45px; margin-bottom:20px; margin-top:20px; text-align:center;">
 
                         <h3>Admins</h3>
                             <?php 
@@ -261,15 +264,12 @@
                             <br>
                             <a href="new_admin.php" class="btn btn-primary">Add admin</a>
                         
+                        </div>
+
+                        <div class="col-lg-5" style="margin-right:30px; margin-left:45px; margin-bottom:20px; margin-top:20px; text-align:center;">                        
+                        
                         <h3> General Announcements </h3>
                         <a class="btn btn-primary" href="new_announcement.php">Add announcement</a>
-                        
-                        <br>
-                        
-                        <h3> Courses </h3>
-                        <a class="btn btn-primary" href="new_course.php">Add Course</a>
-
-                        <br>
 
                         <h3>Voting</h3>
                         <a class="btn btn-primary" href="new_vote_step1.php">Set Up a Vote</a>
