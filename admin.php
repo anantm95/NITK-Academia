@@ -120,7 +120,7 @@
             <!-- /.navbar-collapse -->
         </nav>
 
-        <div id="page-wrapper">
+        <div id="page-wrapper" style="background-color:#D6D6C1">
 
             <div class="container-fluid">
 
@@ -130,7 +130,7 @@
                         <div class="table-responsive">
                         <form method="post" action="set_timetable.php" role="form">
                             <table class="table table-bordered table-hover table-striped">
-                                <thead>
+                                <thead style="background-color:#ffffff;">
                                     <tr>
                                     	<th></th>
                                         <th>1</th>
