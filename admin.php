@@ -150,7 +150,7 @@
                                 $tt_result_assoc = $tt_result->fetch_assoc();
 
                                 echo "<tbody>
-                                    <tr>
+                                    <tr class='success'>
                                         <td><b>Monday</b></td>
                                         <td style='width:100px;'><input type='text' name='mon1' value=".$tt_result_assoc["mon1"]." style='width:80px;'></td>
                                         <td style='width:100px;'><input type='text' name='mon2' value=".$tt_result_assoc["mon2"]." style='width:80px;'></td>
@@ -161,7 +161,7 @@
                                         <td style='width:100px;'><input type='text' name='mon7' value=".$tt_result_assoc["mon7"]." style='width:80px;'></td>
                                         <td style='width:100px;'><input type='text' name='mon8' value=".$tt_result_assoc["mon8"]." style='width:80px;'></td>
                                     </tr>
-                                    <tr>
+                                    <tr class='warning'>
                                         <td><b>Tuesday</b></td>
                                         <td style='width:100px;'><input type='text' name='tue1' value=".$tt_result_assoc["tue1"]." style='width:80px;'></td>
                                         <td style='width:100px;'><input type='text' name='tue2' value=".$tt_result_assoc["tue2"]." style='width:80px;'></td>
@@ -172,7 +172,7 @@
                                         <td style='width:100px;'><input type='text' name='tue7' value=".$tt_result_assoc["tue7"]." style='width:80px;'></td>
                                         <td style='width:100px;'><input type='text' name='tue8' value=".$tt_result_assoc["tue8"]." style='width:80px;'></td>
                                     </tr>
-                                    <tr>
+                                    <tr class='danger'>
                                         <td><b>Wednesday</b></td>
                                         <td style='width:100px;'><input type='text' name='wed1' value=".$tt_result_assoc["wed1"]." style='width:80px;'></td>
                                         <td style='width:100px;'><input type='text' name='wed2' value=".$tt_result_assoc["wed2"]." style='width:80px;'></td>
@@ -183,7 +183,7 @@
                                         <td style='width:100px;'><input type='text' name='wed7' value=".$tt_result_assoc["wed7"]." style='width:80px;'></td>
                                         <td style='width:100px;'><input type='text' name='wed8' value=".$tt_result_assoc["wed8"]." style='width:80px;'></td>
                                     </tr>
-                                    <tr>
+                                    <tr class='warning'>
                                         <td><b>Thursday</b></td>
                                         <td style='width:100px;'><input type='text' name='thu1' value=".$tt_result_assoc["thu1"]." style='width:80px;'></td>
                                         <td style='width:100px;'><input type='text' name='thu2' value=".$tt_result_assoc["thu2"]." style='width:80px;'></td>
@@ -194,7 +194,7 @@
                                         <td style='width:100px;'><input type='text' name='thu7' value=".$tt_result_assoc["thu7"]." style='width:80px;'></td>
                                         <td style='width:100px;'><input type='text' name='thu8' value=".$tt_result_assoc["thu8"]." style='width:80px;'></td>
                                     </tr>
-                                    <tr>
+                                    <tr class='success'>
                                         <td><b>Friday</b></td>
                                         <td style='width:100px;'><input type='text' name='fri1' value=".$tt_result_assoc["fri1"]." style='width:80px;'></td>
                                         <td style='width:100px;'><input type='text' name='fri2' value=".$tt_result_assoc["fri2"]." style='width:80px;'></td>

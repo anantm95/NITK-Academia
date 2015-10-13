@@ -147,7 +147,7 @@
                                 $tt_result_assoc = $tt_result->fetch_assoc();
 
                                 echo "<tbody>
-                                    <tr>
+                                    <tr class='success'>
                                         <td><b>Monday</b></td>
                                         <td>".$tt_result_assoc["mon1"]."</td>
                                         <td>".$tt_result_assoc["mon2"]."</td>
@@ -158,7 +158,7 @@
                                         <td>".$tt_result_assoc["mon7"]."</td>
                                         <td>".$tt_result_assoc["mon8"]."</td>
                                     </tr>
-                                    <tr>
+                                    <tr class='warning'>
                                         <td><b>Tuesday</b></td>
                                         <td>".$tt_result_assoc["tue1"]."</td>
                                         <td>".$tt_result_assoc["tue2"]."</td>
@@ -169,7 +169,7 @@
                                         <td>".$tt_result_assoc["tue7"]."</td>
                                         <td>".$tt_result_assoc["tue8"]."</td>
                                     </tr>
-                                    <tr>
+                                    <tr class='danger'>
                                         <td><b>Wednesday</b></td>
                                         <td>".$tt_result_assoc["wed1"]."</td>
                                         <td>".$tt_result_assoc["wed2"]."</td>
@@ -180,7 +180,7 @@
                                         <td>".$tt_result_assoc["wed7"]."</td>
                                         <td>".$tt_result_assoc["wed8"]."</td>
                                     </tr>
-                                    <tr>
+                                    <tr class='warning'>
                                         <td><b>Thursday</b></td>
                                         <td>".$tt_result_assoc["thu1"]."</td>
                                         <td>".$tt_result_assoc["thu2"]."</td>
@@ -191,7 +191,7 @@
                                         <td>".$tt_result_assoc["thu7"]."</td>
                                         <td>".$tt_result_assoc["thu8"]."</td>
                                     </tr>
-                                    <tr>
+                                    <tr class='success'>
                                         <td><b>Friday</b></td>
                                         <td>".$tt_result_assoc["fri1"]."</td>
                                         <td>".$tt_result_assoc["fri2"]."</td>
