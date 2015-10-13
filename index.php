@@ -140,63 +140,70 @@
                                         <th>8</th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <?php  
+
+                                $sql_time_table = "SELECT * FROM time_table WHERE classname = '$class_user'";
+                                $tt_result = $conn->query($sql_time_table);
+                                $tt_result_assoc = $tt_result->fetch_assoc();
+
+                                echo "<tbody>
                                     <tr>
-                                        <td>Monday</td>
-                                        <td>1265</td>
-                                        <td>32.3%</td>
-                                        <td>$321.33</td>
-                                        <td>32.3%</td>
-                                        <td>32.3%</td>
-                                        <td>32.3%</td>
-                                        <td>32.3%</td>
-                                        <td>32.3%</td>
+                                        <td><b>Monday</b></td>
+                                        <td>".$tt_result_assoc["mon1"]."</td>
+                                        <td>".$tt_result_assoc["mon2"]."</td>
+                                        <td>".$tt_result_assoc["mon3"]."</td>
+                                        <td>".$tt_result_assoc["mon4"]."</td>
+                                        <td>".$tt_result_assoc["mon5"]."</td>
+                                        <td>".$tt_result_assoc["mon6"]."</td>
+                                        <td>".$tt_result_assoc["mon7"]."</td>
+                                        <td>".$tt_result_assoc["mon8"]."</td>
                                     </tr>
                                     <tr>
-                                        <td>Tuesday</td>
-                                        <td>1265</td>
-                                        <td>32.3%</td>
-                                        <td>$321.33</td>
-                                        <td>32.3%</td>
-                                        <td>32.3%</td>
-                                        <td>32.3%</td>
-                                        <td>32.3%</td>
-                                        <td>32.3%</td>
+                                        <td><b>Tuesday</b></td>
+                                        <td>".$tt_result_assoc["tue1"]."</td>
+                                        <td>".$tt_result_assoc["tue2"]."</td>
+                                        <td>".$tt_result_assoc["tue3"]."</td>
+                                        <td>".$tt_result_assoc["tue4"]."</td>
+                                        <td>".$tt_result_assoc["tue5"]."</td>
+                                        <td>".$tt_result_assoc["tue6"]."</td>
+                                        <td>".$tt_result_assoc["tue7"]."</td>
+                                        <td>".$tt_result_assoc["tue8"]."</td>
                                     </tr>
                                     <tr>
-                                        <td>Wednesday</td>
-                                        <td>1265</td>
-                                        <td>32.3%</td>
-                                        <td>$321.33</td>
-                                        <td>32.3%</td>
-                                        <td>32.3%</td>
-                                        <td>32.3%</td>
-                                        <td>32.3%</td>
-                                        <td>32.3%</td>
+                                        <td><b>Wednesday</b></td>
+                                        <td>".$tt_result_assoc["wed1"]."</td>
+                                        <td>".$tt_result_assoc["wed2"]."</td>
+                                        <td>".$tt_result_assoc["wed3"]."</td>
+                                        <td>".$tt_result_assoc["wed4"]."</td>
+                                        <td>".$tt_result_assoc["wed5"]."</td>
+                                        <td>".$tt_result_assoc["wed6"]."</td>
+                                        <td>".$tt_result_assoc["wed7"]."</td>
+                                        <td>".$tt_result_assoc["wed8"]."</td>
                                     </tr>
                                     <tr>
-                                        <td>Thursday</td>
-                                        <td>1265</td>
-                                        <td>32.3%</td>
-                                        <td>$321.33</td>
-                                        <td>32.3%</td>
-                                        <td>32.3%</td>
-                                        <td>32.3%</td>
-                                        <td>32.3%</td>
-                                        <td>32.3%</td>
+                                        <td><b>Thursday</b></td>
+                                        <td>".$tt_result_assoc["thu1"]."</td>
+                                        <td>".$tt_result_assoc["thu2"]."</td>
+                                        <td>".$tt_result_assoc["thu3"]."</td>
+                                        <td>".$tt_result_assoc["thu4"]."</td>
+                                        <td>".$tt_result_assoc["thu5"]."</td>
+                                        <td>".$tt_result_assoc["thu6"]."</td>
+                                        <td>".$tt_result_assoc["thu7"]."</td>
+                                        <td>".$tt_result_assoc["thu8"]."</td>
                                     </tr>
                                     <tr>
-                                        <td>Friday</td>
-                                        <td>1265</td>
-                                        <td>32.3%</td>
-                                        <td>$321.33</td>
-                                        <td>32.3%</td>
-                                        <td>32.3%</td>
-                                        <td>32.3%</td>
-                                        <td>32.3%</td>
-                                        <td>32.3%</td>
+                                        <td><b>Friday</b></td>
+                                        <td>".$tt_result_assoc["fri1"]."</td>
+                                        <td>".$tt_result_assoc["fri2"]."</td>
+                                        <td>".$tt_result_assoc["fri3"]."</td>
+                                        <td>".$tt_result_assoc["fri4"]."</td>
+                                        <td>".$tt_result_assoc["fri5"]."</td>
+                                        <td>".$tt_result_assoc["fri6"]."</td>
+                                        <td>".$tt_result_assoc["fri7"]."</td>
+                                        <td>".$tt_result_assoc["fri8"]."</td>
                                     </tr>
-                                </tbody>
+                                </tbody>"
+                                ?>
                             </table>
                         </div>
                     </div>
