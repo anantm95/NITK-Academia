@@ -143,63 +143,69 @@
                                         <th>8</th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <?php 
+
+                                $sql_time_table = "SELECT * FROM time_table WHERE classname = '$class_user'";
+                                $tt_result = $conn->query($sql_time_table);
+                                $tt_result_assoc = $tt_result->fetch_assoc();
+
+                                echo "<tbody>
                                     <tr>
                                         <td>Monday</td>
-                                        <td style="width:100px;"><input type="text" name="mon1" value="hello" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="mon2" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="mon3" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="mon4" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="mon5" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="mon6" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="mon7" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="mon8" style="width:80px;"></td>
+                                        <td style='width:100px;'><input type='text' name='mon1' value=".$tt_result_assoc["mon1"]." style='width:80px;'></td>
+                                        <td style='width:100px;'><input type='text' name='mon2' value=".$tt_result_assoc["mon2"]." style='width:80px;'></td>
+                                        <td style='width:100px;'><input type='text' name='mon3' value=".$tt_result_assoc["mon3"]." style='width:80px;'></td>
+                                        <td style='width:100px;'><input type='text' name='mon4' value=".$tt_result_assoc["mon4"]." style='width:80px;'></td>
+                                        <td style='width:100px;'><input type='text' name='mon5' value=".$tt_result_assoc["mon5"]." style='width:80px;'></td>
+                                        <td style='width:100px;'><input type='text' name='mon6' value=".$tt_result_assoc["mon6"]." style='width:80px;'></td>
+                                        <td style='width:100px;'><input type='text' name='mon7' value=".$tt_result_assoc["mon7"]." style='width:80px;'></td>
+                                        <td style='width:100px;'><input type='text' name='mon8' value=".$tt_result_assoc["mon8"]." style='width:80px;'></td>
                                     </tr>
                                     <tr>
                                         <td>Tuesday</td>
-                                        <td style="width:100px;"><input type="text" name="tue1" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="tue2" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="tue3" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="tue4" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="tue5" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="tue6" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="tue7" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="tue8" style="width:80px;"></td>
+                                        <td style='width:100px;'><input type='text' name='tue1' value=".$tt_result_assoc["tue1"]." style='width:80px;'></td>
+                                        <td style='width:100px;'><input type='text' name='tue2' value=".$tt_result_assoc["tue2"]." style='width:80px;'></td>
+                                        <td style='width:100px;'><input type='text' name='tue3' value=".$tt_result_assoc["tue3"]." style='width:80px;'></td>
+                                        <td style='width:100px;'><input type='text' name='tue4' value=".$tt_result_assoc["tue4"]." style='width:80px;'></td>
+                                        <td style='width:100px;'><input type='text' name='tue5' value=".$tt_result_assoc["tue5"]." style='width:80px;'></td>
+                                        <td style='width:100px;'><input type='text' name='tue6' value=".$tt_result_assoc["tue6"]." style='width:80px;'></td>
+                                        <td style='width:100px;'><input type='text' name='tue7' value=".$tt_result_assoc["tue7"]." style='width:80px;'></td>
+                                        <td style='width:100px;'><input type='text' name='tue8' value=".$tt_result_assoc["tue8"]." style='width:80px;'></td>
                                     </tr>
                                     <tr>
                                         <td>Wednesday</td>
-                                        <td style="width:100px;"><input type="text" name="wed1" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="wed2" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="wed3" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="wed4" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="wed5" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="wed6" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="wed7" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="wed8" style="width:80px;"></td>
+                                        <td style='width:100px;'><input type='text' name='wed1' value=".$tt_result_assoc["wed1"]." style='width:80px;'></td>
+                                        <td style='width:100px;'><input type='text' name='wed2' value=".$tt_result_assoc["wed2"]." style='width:80px;'></td>
+                                        <td style='width:100px;'><input type='text' name='wed3' value=".$tt_result_assoc["wed3"]." style='width:80px;'></td>
+                                        <td style='width:100px;'><input type='text' name='wed4' value=".$tt_result_assoc["wed4"]." style='width:80px;'></td>
+                                        <td style='width:100px;'><input type='text' name='wed5' value=".$tt_result_assoc["wed5"]." style='width:80px;'></td>
+                                        <td style='width:100px;'><input type='text' name='wed6' value=".$tt_result_assoc["wed6"]." style='width:80px;'></td>
+                                        <td style='width:100px;'><input type='text' name='wed7' value=".$tt_result_assoc["wed7"]." style='width:80px;'></td>
+                                        <td style='width:100px;'><input type='text' name='wed8' value=".$tt_result_assoc["wed8"]." style='width:80px;'></td>
                                     </tr>
                                     <tr>
                                         <td>Thursday</td>
-                                        <td style="width:100px;"><input type="text" name="thu1" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="thu2" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="thu3" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="thu4" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="thu5" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="thu6" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="thu7" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="thu8" style="width:80px;"></td>
+                                        <td style='width:100px;'><input type='text' name='thu1' value=".$tt_result_assoc["thu1"]." style='width:80px;'></td>
+                                        <td style='width:100px;'><input type='text' name='thu2' value=".$tt_result_assoc["thu2"]." style='width:80px;'></td>
+                                        <td style='width:100px;'><input type='text' name='thu3' value=".$tt_result_assoc["thu3"]." style='width:80px;'></td>
+                                        <td style='width:100px;'><input type='text' name='thu4' value=".$tt_result_assoc["thu4"]." style='width:80px;'></td>
+                                        <td style='width:100px;'><input type='text' name='thu5' value=".$tt_result_assoc["thu5"]." style='width:80px;'></td>
+                                        <td style='width:100px;'><input type='text' name='thu6' value=".$tt_result_assoc["thu6"]." style='width:80px;'></td>
+                                        <td style='width:100px;'><input type='text' name='thu7' value=".$tt_result_assoc["thu7"]." style='width:80px;'></td>
+                                        <td style='width:100px;'><input type='text' name='thu8' value=".$tt_result_assoc["thu8"]." style='width:80px;'></td>
                                     </tr>
                                     <tr>
                                         <td>Friday</td>
-                                        <td style="width:100px;"><input type="text" name="fri1" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="fri2" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="fri3" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="fri4" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="fri5" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="fri6" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="fri7" style="width:80px;"></td>
-                                        <td style="width:100px;"><input type="text" name="fri8" style="width:80px;"></td>
+                                        <td style='width:100px;'><input type='text' name='fri1' value=".$tt_result_assoc["fri1"]." style='width:80px;'></td>
+                                        <td style='width:100px;'><input type='text' name='fri2' value=".$tt_result_assoc["fri2"]." style='width:80px;'></td>
+                                        <td style='width:100px;'><input type='text' name='fri3' value=".$tt_result_assoc["fri3"]." style='width:80px;'></td>
+                                        <td style='width:100px;'><input type='text' name='fri4' value=".$tt_result_assoc["fri4"]." style='width:80px;'></td>
+                                        <td style='width:100px;'><input type='text' name='fri5' value=".$tt_result_assoc["fri5"]." style='width:80px;'></td>
+                                        <td style='width:100px;'><input type='text' name='fri6' value=".$tt_result_assoc["fri6"]." style='width:80px;'></td>
+                                        <td style='width:100px;'><input type='text' name='fri7' value=".$tt_result_assoc["fri7"]." style='width:80px;'></td>
+                                        <td style='width:100px;'><input type='text' name='fri8' value=".$tt_result_assoc["fri8"]." style='width:80px;'></td>
                                     </tr>
-                                </tbody>
+                                </tbody>" ?>
                             </table>
                             <button type="submit" name="submit" id="submit" class="btn btn-success" style="width:150px;">Save</button>
                         </form>
