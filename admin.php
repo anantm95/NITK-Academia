@@ -125,9 +125,10 @@
             <div class="container-fluid">
 
                 <div class="row">
-                    <div class="col-lg-8">
+                    <div class="col-lg-12">
                         <h2>Time Table</h2>
                         <div class="table-responsive">
+                        <form method="post" action="set_timetable.php" role="form">
                             <table class="table table-bordered table-hover table-striped">
                                 <thead>
                                     <tr>
@@ -145,77 +146,64 @@
                                 <tbody>
                                     <tr>
                                         <td>Monday</td>
-                                        <td>1265</td>
-                                        <td>32.3%</td>
-                                        <td>$321.33</td>
-                                        <td>32.3%</td>
-                                        <td>32.3%</td>
-                                        <td>32.3%</td>
-                                        <td>32.3%</td>
-                                        <td>32.3%</td>
+                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
                                     </tr>
                                     <tr>
                                         <td>Tuesday</td>
-                                        <td>1265</td>
-                                        <td>32.3%</td>
-                                        <td>$321.33</td>
-                                        <td>32.3%</td>
-                                        <td>32.3%</td>
-                                        <td>32.3%</td>
-                                        <td>32.3%</td>
-                                        <td>32.3%</td>
+                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
                                     </tr>
                                     <tr>
                                         <td>Wednesday</td>
-                                        <td>1265</td>
-                                        <td>32.3%</td>
-                                        <td>$321.33</td>
-                                        <td>32.3%</td>
-                                        <td>32.3%</td>
-                                        <td>32.3%</td>
-                                        <td>32.3%</td>
-                                        <td>32.3%</td>
+                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
                                     </tr>
                                     <tr>
                                         <td>Thursday</td>
-                                        <td>1265</td>
-                                        <td>32.3%</td>
-                                        <td>$321.33</td>
-                                        <td>32.3%</td>
-                                        <td>32.3%</td>
-                                        <td>32.3%</td>
-                                        <td>32.3%</td>
-                                        <td>32.3%</td>
+                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
                                     </tr>
                                     <tr>
                                         <td>Friday</td>
-                                        <td>1265</td>
-                                        <td>32.3%</td>
-                                        <td>$321.33</td>
-                                        <td>32.3%</td>
-                                        <td>32.3%</td>
-                                        <td>32.3%</td>
-                                        <td>32.3%</td>
-                                        <td>32.3%</td>
+                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
+                                        <td style="width:100px;"><input type="text" name="mon1" style="width:80px;"></td>
                                     </tr>
                                 </tbody>
                             </table>
+                            <button type="submit" name="submit" id="submit" class="btn btn-success" style="width:150px;">Save</button>
+                        </form>
                         </div>
-                    </div>
-                    <div class="col-lg-4">
-                    	<h3> General Announcements </h3>
-                    	<a class="btn btn-primary" href="new_announcement.php">Add announcement</a>
-                        
-                        <br>
-                        
-                        <h3> Courses </h3>
-                        <a class="btn btn-primary" href="new_course.php">Add Course</a>
-
-                        <br>
-
-                        <h3>Voting</h3>
-                        <a class="btn btn-primary" href="new_vote_step1.php">Set Up a Vote</a>
-
                     </div>
 
                     <div class="col-lg-12">
@@ -247,7 +235,10 @@
                     </div>
 
                     <div class="col-lg-12">
-                    <h3>Admins</h3>
+                        
+                        <div class="col-lg-4">
+
+                        <h3>Admins</h3>
                             <?php 
                                 $admin = array(); 
                                 $admin_sql = "SELECT email from admin where classname = '$class_user'";
@@ -263,6 +254,21 @@
                             ?>
                             <br>
                             <a href="new_admin.php" class="btn btn-primary">Add admin</a>
+                        
+                        <h3> General Announcements </h3>
+                        <a class="btn btn-primary" href="new_announcement.php">Add announcement</a>
+                        
+                        <br>
+                        
+                        <h3> Courses </h3>
+                        <a class="btn btn-primary" href="new_course.php">Add Course</a>
+
+                        <br>
+
+                        <h3>Voting</h3>
+                        <a class="btn btn-primary" href="new_vote_step1.php">Set Up a Vote</a>
+
+                        </div>
                     </div>
                     </div>
                 </div>
