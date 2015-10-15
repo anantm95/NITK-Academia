@@ -234,7 +234,7 @@
                             echo "<div class='col-lg-5' style='background-color:#B1c5cF; margin-right:30px; margin-left:45px; margin-bottom:20px; margin-top:20px; text-align:center;'";
                             echo "<br>";
                             echo "<h3>".$course[$i]['course_code']."</h3>";
-                            echo "<h4><a href='course_detail.php?code=".$course[$i]['course_code']."'>".$course[$i]['course_name']."</a></h4>";
+                            echo "<h4><a href='course_admin.php?code=".$course[$i]['course_code']."'>".$course[$i]['course_name']."</a></h4>";
                             echo "<br>";
                             echo "</div>";
                         }
