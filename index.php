@@ -207,6 +207,7 @@
                             </table>
                         </div>
                     </div>
+                    <!--
                     <div class="col-lg-4">
                         <br>
                         <br>
@@ -233,6 +234,48 @@
                             }
                             
                         ?>
+                    </div> -->
+                    <div class="col-lg-4">
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><i class="fa fa-clock-o fa-fw"></i> Announcements</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div class="list-group">
+
+                                <?php
+
+                                    $ann = array(); 
+                                    $ann_sql = "SELECT announcement from announcement where classname = '$class_user'";
+                                    $all_ann = $conn->query($ann_sql);
+                                    while($row = $all_ann->fetch_assoc()) {
+                                        $ann[] = $row;
+                                    }
+
+
+                                    //if(count($ann) == 0)
+                                    //    echo "No annoucements";
+                                 
+                                    for($i=0;$i<count($ann);$i++) {
+                                        echo "<div href='#' class='list-group-item'>
+                                        <span class='badge'>just now</span>
+                                        <i class='fa fa-fw fa-check'></i>"." ".$ann[$i]['announcement']."</div>";
+                                        echo "<br>";
+                                    }
+                                    
+                                ?>
+                                    
+                                </div>
+                                <div class="text-right">
+                                    <a href="#">View All Announcements <i class="fa fa-arrow-circle-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-lg-12">
                         <br>
