@@ -241,7 +241,7 @@
                         <br>
                         <br>
                         <br>
-                        <div class="panel panel-default">
+                        <div class="panel panel-primary">
                             <div class="panel-heading">
                                 <h3 class="panel-title"><i class="fa fa-clock-o fa-fw"></i> Announcements</h3>
                             </div>
