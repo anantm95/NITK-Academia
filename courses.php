@@ -137,7 +137,7 @@
                            	 			<div class='panel-heading'>
                                 			<div class='row'>
                                     			<div class='col-xs-3'>
-                                        			<i class='fa fa-tasks fa-3x'></i>
+                                        			<i class='fa fa-tasks fa-4x'></i>
                                     				</div>
                                     				<div class='col-xs-9 text-right'>
                                         			<div class='huge'>".$course[$i]['course_code']."</div>

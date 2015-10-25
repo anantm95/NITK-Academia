@@ -113,7 +113,7 @@
             <!-- /.navbar-collapse -->
         </nav>
 
-        <div id="page-wrapper" style="background-color:#D6D6C1">
+        <div id="page-wrapper">
 
             <div class="container-fluid">
 
