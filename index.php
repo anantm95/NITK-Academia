@@ -119,15 +119,15 @@
 
                 <div class="row">
                     <div class="col-lg-12">
-                        <?php echo "<h2>Hello! Welcome to your class group, ".$class_user."";?>
+                        <?php echo "<h2>Hello! Welcome to your class group, ".$class_user."!";?>
                     </div>
 
                     <div class="col-lg-8">
                         <br><br>
                         <br>
-                        <div class="panel panel-primary">
+                        <div class="panel panel-success">
                         <div class="panel-heading">
-                            <h3 class="panel-title"><i class="fa fa-calendar fa-fw"></i> Time-Table</h3>
+                            <h3 class="panel-title"><i class="fa fa-calendar fa-fw"></i><b> Time-Table</b></h3>
                         </div>
                         <div class="panel-body">
                             <div class="table-responsive">
@@ -283,7 +283,6 @@
                         </div>
                     </div>
                     <div class="col-lg-12">
-                        <br>
                         <br>
                         <?php
                             echo "<h2>".$class_user."'s Representatives</h2>";
