@@ -119,92 +119,99 @@
 
                 <div class="row">
                     <div class="col-lg-12">
-                        <?php echo "<h1>Hello! Welcome to your class group, ".$class_user."";?>
+                        <?php echo "<h2>Hello! Welcome to your class group, ".$class_user."";?>
                     </div>
 
                     <div class="col-lg-8">
                         <br><br>
-                        <h2>Time Table</h2>
-                        <div class="table-responsive">
-                            <table class="table table-bordered table-hover table-striped">
-                                <thead style="background-color:#ffffff;">
-                                    <tr>
-                                    	<th></th>
-                                        <th>1</th>
-                                        <th>2</th>
-                                        <th>3</th>
-                                        <th>4</th>
-                                        <th>5</th>
-                                        <th>6</th>
-                                        <th>7</th>
-                                        <th>8</th>
-                                    </tr>
-                                </thead>
-                                <?php  
+                        <br>
+                        <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><i class="fa fa-calendar fa-fw"></i> Time-Table</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-hover table-striped">
+                                    <thead style="background-color:#ffffff;">
+                                        <tr>
+                                        	<th></th>
+                                            <th>1</th>
+                                            <th>2</th>
+                                            <th>3</th>
+                                            <th>4</th>
+                                            <th>5</th>
+                                            <th>6</th>
+                                            <th>7</th>
+                                            <th>8</th>
+                                        </tr>
+                                    </thead>
+                                    <?php  
 
-                                $sql_time_table = "SELECT * FROM time_table WHERE classname = '$class_user'";
-                                $tt_result = $conn->query($sql_time_table);
-                                $tt_result_assoc = $tt_result->fetch_assoc();
+                                    $sql_time_table = "SELECT * FROM time_table WHERE classname = '$class_user'";
+                                    $tt_result = $conn->query($sql_time_table);
+                                    $tt_result_assoc = $tt_result->fetch_assoc();
 
-                                echo "<tbody>
-                                    <tr class='success'>
-                                        <td><b>Monday</b></td>
-                                        <td>".$tt_result_assoc["mon1"]."</td>
-                                        <td>".$tt_result_assoc["mon2"]."</td>
-                                        <td>".$tt_result_assoc["mon3"]."</td>
-                                        <td>".$tt_result_assoc["mon4"]."</td>
-                                        <td>".$tt_result_assoc["mon5"]."</td>
-                                        <td>".$tt_result_assoc["mon6"]."</td>
-                                        <td>".$tt_result_assoc["mon7"]."</td>
-                                        <td>".$tt_result_assoc["mon8"]."</td>
-                                    </tr>
-                                    <tr class='warning'>
-                                        <td><b>Tuesday</b></td>
-                                        <td>".$tt_result_assoc["tue1"]."</td>
-                                        <td>".$tt_result_assoc["tue2"]."</td>
-                                        <td>".$tt_result_assoc["tue3"]."</td>
-                                        <td>".$tt_result_assoc["tue4"]."</td>
-                                        <td>".$tt_result_assoc["tue5"]."</td>
-                                        <td>".$tt_result_assoc["tue6"]."</td>
-                                        <td>".$tt_result_assoc["tue7"]."</td>
-                                        <td>".$tt_result_assoc["tue8"]."</td>
-                                    </tr>
-                                    <tr class='danger'>
-                                        <td><b>Wednesday</b></td>
-                                        <td>".$tt_result_assoc["wed1"]."</td>
-                                        <td>".$tt_result_assoc["wed2"]."</td>
-                                        <td>".$tt_result_assoc["wed3"]."</td>
-                                        <td>".$tt_result_assoc["wed4"]."</td>
-                                        <td>".$tt_result_assoc["wed5"]."</td>
-                                        <td>".$tt_result_assoc["wed6"]."</td>
-                                        <td>".$tt_result_assoc["wed7"]."</td>
-                                        <td>".$tt_result_assoc["wed8"]."</td>
-                                    </tr>
-                                    <tr class='warning'>
-                                        <td><b>Thursday</b></td>
-                                        <td>".$tt_result_assoc["thu1"]."</td>
-                                        <td>".$tt_result_assoc["thu2"]."</td>
-                                        <td>".$tt_result_assoc["thu3"]."</td>
-                                        <td>".$tt_result_assoc["thu4"]."</td>
-                                        <td>".$tt_result_assoc["thu5"]."</td>
-                                        <td>".$tt_result_assoc["thu6"]."</td>
-                                        <td>".$tt_result_assoc["thu7"]."</td>
-                                        <td>".$tt_result_assoc["thu8"]."</td>
-                                    </tr>
-                                    <tr class='success'>
-                                        <td><b>Friday</b></td>
-                                        <td>".$tt_result_assoc["fri1"]."</td>
-                                        <td>".$tt_result_assoc["fri2"]."</td>
-                                        <td>".$tt_result_assoc["fri3"]."</td>
-                                        <td>".$tt_result_assoc["fri4"]."</td>
-                                        <td>".$tt_result_assoc["fri5"]."</td>
-                                        <td>".$tt_result_assoc["fri6"]."</td>
-                                        <td>".$tt_result_assoc["fri7"]."</td>
-                                        <td>".$tt_result_assoc["fri8"]."</td>
-                                    </tr>
-                                </tbody>"
-                                ?>
-                            </table>
+                                    echo "<tbody>
+                                        <tr class='success'>
+                                            <td><b>Monday</b></td>
+                                            <td>".$tt_result_assoc["mon1"]."</td>
+                                            <td>".$tt_result_assoc["mon2"]."</td>
+                                            <td>".$tt_result_assoc["mon3"]."</td>
+                                            <td>".$tt_result_assoc["mon4"]."</td>
+                                            <td>".$tt_result_assoc["mon5"]."</td>
+                                            <td>".$tt_result_assoc["mon6"]."</td>
+                                            <td>".$tt_result_assoc["mon7"]."</td>
+                                            <td>".$tt_result_assoc["mon8"]."</td>
+                                        </tr>
+                                        <tr class='warning'>
+                                            <td><b>Tuesday</b></td>
+                                            <td>".$tt_result_assoc["tue1"]."</td>
+                                            <td>".$tt_result_assoc["tue2"]."</td>
+                                            <td>".$tt_result_assoc["tue3"]."</td>
+                                            <td>".$tt_result_assoc["tue4"]."</td>
+                                            <td>".$tt_result_assoc["tue5"]."</td>
+                                            <td>".$tt_result_assoc["tue6"]."</td>
+                                            <td>".$tt_result_assoc["tue7"]."</td>
+                                            <td>".$tt_result_assoc["tue8"]."</td>
+                                        </tr>
+                                        <tr class='danger'>
+                                            <td><b>Wednesday</b></td>
+                                            <td>".$tt_result_assoc["wed1"]."</td>
+                                            <td>".$tt_result_assoc["wed2"]."</td>
+                                            <td>".$tt_result_assoc["wed3"]."</td>
+                                            <td>".$tt_result_assoc["wed4"]."</td>
+                                            <td>".$tt_result_assoc["wed5"]."</td>
+                                            <td>".$tt_result_assoc["wed6"]."</td>
+                                            <td>".$tt_result_assoc["wed7"]."</td>
+                                            <td>".$tt_result_assoc["wed8"]."</td>
+                                        </tr>
+                                        <tr class='warning'>
+                                            <td><b>Thursday</b></td>
+                                            <td>".$tt_result_assoc["thu1"]."</td>
+                                            <td>".$tt_result_assoc["thu2"]."</td>
+                                            <td>".$tt_result_assoc["thu3"]."</td>
+                                            <td>".$tt_result_assoc["thu4"]."</td>
+                                            <td>".$tt_result_assoc["thu5"]."</td>
+                                            <td>".$tt_result_assoc["thu6"]."</td>
+                                            <td>".$tt_result_assoc["thu7"]."</td>
+                                            <td>".$tt_result_assoc["thu8"]."</td>
+                                        </tr>
+                                        <tr class='success'>
+                                            <td><b>Friday</b></td>
+                                            <td>".$tt_result_assoc["fri1"]."</td>
+                                            <td>".$tt_result_assoc["fri2"]."</td>
+                                            <td>".$tt_result_assoc["fri3"]."</td>
+                                            <td>".$tt_result_assoc["fri4"]."</td>
+                                            <td>".$tt_result_assoc["fri5"]."</td>
+                                            <td>".$tt_result_assoc["fri6"]."</td>
+                                            <td>".$tt_result_assoc["fri7"]."</td>
+                                            <td>".$tt_result_assoc["fri8"]."</td>
+                                        </tr>
+                                    </tbody>"
+                                    ?>
+                                </table>
+                            </div>
+                        </div>
                         </div>
                     </div>
                     <!--
@@ -236,8 +243,6 @@
                         ?>
                     </div> -->
                     <div class="col-lg-4">
-                        <br>
-                        <br>
                         <br>
                         <br>
                         <br>
