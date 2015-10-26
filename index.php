@@ -15,7 +15,7 @@
 
     if(!isset($_SESSION['user']))
     {
-        header("Location: login.html");
+        header("Location: login.php");
     }
     $user_email = $_SESSION['user'];
 
@@ -80,9 +80,20 @@
             <ul class="nav navbar-right top-nav">
             	<li> 
             		<a> Welcome, <?php echo $user_email; ?> </a>
-                <li>    
-                <a href="logout.php">Sign Out</a>
                 </li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <b class="caret"></b></a>
+                    <ul class="dropdown-menu" style="width:200px;">
+                        <li>
+                            <a type="button" href="#forgotPassModal" data-toggle="modal" data-target="#forgotPassModal"><i class="fa fa-fw fa-user"></i> Change Password</a>
+                        </li>
+                        <li>
+                            <a href="logout.php"><i class="fa fa-fw fa-user"></i> Sign Out</a>
+                        </li>
+                    </ul>
+                </li>
+
             </ul>
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">

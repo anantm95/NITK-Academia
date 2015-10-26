@@ -1,56 +1,143 @@
+<?php
+
+        session_start();
+
+        $servername = "localhost";
+        $username = "root";
+        $password = "password";
+        $dbname = "academia";
+
+        // Create connection
+        $conn = new mysqli($servername, $username, $password, $dbname);
+        // Check connection
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+
+        if(isset($_SESSION['user']))
+            header("Location:index.php");
+
+?>
+
 <!DOCTYPE html>
-<html>
-    <body>
-		<?php
+<html lang="en">
 
-		session_start();
+<head>
 
-		$servername = "localhost";
-		$username = "root";
-		$password = "password";
-		$dbname = "academia";
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-		// Create connection
-		$conn = new mysqli($servername, $username, $password, $dbname);
-		// Check connection
-		if ($conn->connect_error) {
-			die("Connection failed: " . $conn->connect_error);
-		}
+    <title>NITK Academia</title>
 
-		if(isset($_POST['submit']))
-		{
-			$classname = $_POST['classname'];
-			$email = $_POST['email'];
-			$password =  $_POST['password'];
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-			$sql1 = "SELECT * FROM user where email = '$email' and classname = '$classname'";
-			$result = $conn->query($sql1);
+    <!-- Custom CSS -->
+    <link href="css/sb-admin.css" rel="stylesheet">
 
-			if($result->num_rows > 0){
-				$check = $result->fetch_assoc();
-				if($password == $check["password"]){
-					$_SESSION['user'] = $check['email'];
-					echo "SUCCESSFULLY LOGGED IN";
-					echo $_SESSION['user'];
-					header("Location: index.php");
-				}
-				else
-			    {
-			    ?>
-			        <script type="text/javascript">alert('wrong details');</script>
-			        <?php
-			    }
-			 
-			}
-			else{
-				?>
-				<script type="text/javascript">alert('Sorry, this User ID does not exist.');</script>
-				<?php
-			}
-		}
-		
+    <!-- Morris Charts CSS -->
+    <link href="css/plugins/morris.css" rel="stylesheet">
 
-		$conn->close();
-		?>
-	</body>
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.php">NITK Academia</a>
+            </div>
+            <!-- Top Menu Items -->
+            <ul class="nav navbar-right top-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Sign Up <b class="caret"></b></a>
+                    <ul class="dropdown-menu" style="width:200px;">
+                        <li>
+                            <a href="student-signup.html"><i class="fa fa-fw fa-user"></i> As Student</a>
+                        </li>
+                        <li>
+                            <a href="cr-signup.html"><i class="fa fa-fw fa-user"></i> As Representative</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- /.navbar-collapse -->
+        </nav>
+
+            <div class="container" style="text-align:center";>
+                <h2 style="color:#9D9D8E;">Welcome to NITK Academia</h2>
+                <h3 style="color:#9D9D8E;">Please log in to your account</h3>
+            </div>
+
+
+            <div class="container">
+                <div style="margin-top:50px;" class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                    <div class="login-panel panel panel-info">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Log In</h3>
+                        </div>
+                        <div class="panel-body">
+                            <form role="form" action = "login_user.php" method="post">
+                                <fieldset>
+                                    <div class="form-group">
+                                        <label for="inputclassname">Class Name</label>
+                                        <input class="form-control" placeholder="Please enter your class name" name="classname">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputemail">Email</label>
+                                        <input class="form-control" placeholder="Please enter your email-id" name="email" type="email" autofocus="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputpassword">Password</label>
+                                        <input class="form-control" placeholder="Please enter your password" name="password" type="password" value="">
+                                    </div>
+
+                                    <br>
+
+                                    <button type="submit" id="submit" name="submit" class="btn btn-lg btn-success" style="width:25%;">Login</button>
+                                    <a href="#" style="float:right; margin-top:20px;">Forgot Password?</a>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script src="js/plugins/morris/raphael.min.js"></script>
+    <script src="js/plugins/morris/morris.min.js"></script>
+    <script src="js/plugins/morris/morris-data.js"></script>
+
+</body>
+
 </html>
