@@ -331,13 +331,24 @@
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h4 class="modal-title">Modal Header</h4>
+              <h4 class="modal-title">Change Password</h4>
             </div>
             <div class="modal-body">
-              <p>Some text in the modal.</p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <form role="form" action = "change_password.php" method="post">
+                  <fieldset>
+                      <div class="form-group">
+                          <input class="form-control" placeholder="Enter old password" name="oldPassword" type="password">
+                      </div>
+                      <div class="form-group">
+                          <input class="form-control" placeholder="Enter new password" name="newPassword" type="password">
+                      </div>
+                      <div class="form-group">
+                          <input class="form-control" placeholder="Re-enter new password" name="confirmNewPassword" type="password" value="">
+                      </div>
+                      <br>
+                      <button type="submit" id="submit" name="submit" class="btn btn-lg btn-success" style="float:right;">Update</button>
+                  </fieldset>
+              </form>
             </div>
           </div>
           

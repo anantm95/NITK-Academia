@@ -107,7 +107,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="inputemail">Email</label>
-                                        <input class="form-control" placeholder="Please enter your email-id" name="email" type="email" autofocus="">
+                                        <input class="form-control" placeholder="Please enter your email-id" name="email" type="email">
                                     </div>
                                     <div class="form-group">
                                         <label for="inputpassword">Password</label>
