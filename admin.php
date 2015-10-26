@@ -207,7 +207,7 @@
                                     </tr>
                                 </tbody>" ?>
                             </table>
-                            <button type="button" name="submit" id="submit" class="btn btn-success" style="width:150px; float:right"; data-toggle="modal" data-target="#myModal">Save</button>
+                            <button type="submit" name="submit" id="submit" class="btn btn-success" style="width:150px; float:right"; >Save</button>
                         </form>
                         </div>
                     </div>

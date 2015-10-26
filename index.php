@@ -125,7 +125,7 @@
                     <div class="col-lg-8">
                         <br><br>
                         <br>
-                        <div class="panel panel-success">
+                        <div class="panel panel-info">
                         <div class="panel-heading">
                             <h3 class="panel-title"><i class="fa fa-calendar fa-fw"></i><b> Time-Table</b></h3>
                         </div>
@@ -246,7 +246,7 @@
                         <br>
                         <br>
                         <br>
-                        <div class="panel panel-primary">
+                        <div class="panel panel-info">
                             <div class="panel-heading">
                                 <h3 class="panel-title"><i class="fa fa-clock-o fa-fw"></i> Announcements</h3>
                             </div>
