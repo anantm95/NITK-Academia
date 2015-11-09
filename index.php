@@ -323,11 +323,13 @@
     </div>
     <!-- /#wrapper -->
 
+
+<!-- modal not working -->
     <div class="container">
       <div class="modal fade" id="forgotPassModal" role="dialog">
         <div class="modal-dialog">
         
-          <!-- Modal content-->
+
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -346,7 +348,7 @@
                           <input class="form-control" placeholder="Re-enter new password" name="confirmNewPassword" type="password" value="">
                       </div>
                       <br>
-                      <button type="submit" id="submit" name="submit" class="btn btn-lg btn-success" style="float:right;">Update</button>
+                      <button type="submit" id="submit" name="submit" class="btn btn-lg btn-success" data-targetstyle="float:right;">Update</button>
                   </fieldset>
               </form>
             </div>
@@ -355,6 +357,7 @@
         </div>
       </div>
     </div>
+
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
