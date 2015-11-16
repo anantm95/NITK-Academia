@@ -49,6 +49,35 @@
 			if($result2 == TRUE)
 				header("Location: admin.php");
 		}
+
+		else if($num_options == 3)
+		{
+			$sql3 = "INSERT INTO vote_details(vote_title, classname, option1, option2, option3) VALUES ('$vote_title', '$class_user', '$option1', '$option2', '$option3')";
+			$result3 = $conn->query($sql3);
+
+			if($result3 == TRUE)
+				header("Location: admin.php");
+		}
+
+		else if($num_options == 4)
+		{
+			$sql4 = "INSERT INTO vote_details(vote_title, classname, option1, option2, option3, option4) VALUES ('$vote_title', '$class_user', '$option1', '$option2', '$option3', '$option4')";
+			$result4 = $conn->query($sql4);
+
+			if($result4 == TRUE)
+				header("Location: admin.php");
+		}
+
+		else if($num_options == 5)
+		{
+			$sql5 = "INSERT INTO vote_details(vote_title, classname, option1, option2, option3, option4, option5) VALUES ('$vote_title', '$class_user', '$option1', '$option2', '$option3', '$option4', '$option5')";
+			$result5 = $conn->query($sql5);
+
+			if($result5 == TRUE)
+				header("Location: admin.php");
+		}
+
+
 	}
 
 
