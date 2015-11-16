@@ -37,4 +37,51 @@
 
 <?php startblock('body') ?>
 
+    <?php
+
+        $vote = array(); 
+        $vote_sql = "SELECT * from vote_details where classname = '$class_user'";
+        $all_votes = $conn->query($vote_sql);
+        while($row = $all_votes->fetch_assoc()) {
+            $vote[] = $row;
+        }
+
+
+        if(count($vote) == 0)
+            echo "No active votes";
+        else
+        { 
+            for($i=count($vote)-1;$i>=0;$i--) {
+                
+                echo "<div class='col-lg-6'>
+                        <br>
+                        <div class='panel panel-primary'>
+                            <div class='panel-heading'>
+                                <div class='row'>
+                                    <div class='col-xs-3'>
+                                        <i class='fa fa-comments fa-4x'></i>
+                                        </div>
+                                        <div class='col-xs-9 text-right'>
+                                        
+                                        <div>".$vote[$i]['vote_title']."</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href='cast_vote.php?vote_id=".$vote[$i]['vote_id']."'>
+                                <div class='panel-footer'>
+                                    <span class='pull-left'>Cast your vote</span>
+                                    <span class='pull-right'><i class='fa fa-arrow-circle-right'></i></span>
+                                    <div class='clearfix'></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>";
+
+            }
+        }
+    
+    ?>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
 <?php endblock() ?>
