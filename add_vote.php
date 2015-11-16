@@ -25,10 +25,30 @@
 	{
 		$num_options = $_POST['num_options'];
 		$vote_title = $_POST['vote_title'];
-	
-		$sql1 = "CREATE TABLE vote (vote_id INT auto_increment primary key, classname VARCHAR(15) default ".$class_user.", vote_title VARCHAR(200))";
-		$result1 = $conn->query($sql1);
+		$option1 = $_POST[0];
+		$option2 = $_POST[1];
+		$option3 = $_POST[2];
+		$option4 = $_POST[3];
+		$option5 = $_POST[4];
+
+
+		if($num_options == 1)
+		{
+			$sql1 = "INSERT INTO vote_details(vote_title, classname, option1) VALUES ('$vote_title', '$class_user', '$option1')";
+			$result1 = $conn->query($sql1);
+
+			if($result1 == TRUE)
+				header("Location: admin.php");
+		}
 		
+		else if($num_options == 2)
+		{
+			$sql2 = "INSERT INTO vote_details(vote_title, classname, option1, option2) VALUES ('$vote_title', '$class_user', '$option1', '$option2')";
+			$result2 = $conn->query($sql2);
+
+			if($result2 == TRUE)
+				header("Location: admin.php");
+		}
 	}
 
 
