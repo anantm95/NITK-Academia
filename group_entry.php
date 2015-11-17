@@ -51,7 +51,7 @@
                         <fieldset>
                             <div class="form-group">
                                 <label for="inputtopic">Topic</label>
-                                <input class="form-control" placeholder="Please enter your selected" name="topic" type="text">
+                                <input class="form-control" placeholder="Please enter your selected topic" name="topic" type="text">
                             </div>
                             <?php
 
@@ -81,28 +81,61 @@
             $member[] = $row;
         }
 
-        for($i=0;$i<count($member);$i++)
-        {
-            echo $member[$i]['topic'];
-            if($member[$i]['member1'] != NULL)   
-                echo $member[$i]['member1'];
+        $sqlTitle = "SELECT group_title from group_data where group_id = '$group_id'";
+        $result = $conn->query($sqlTitle);
+        $result_array = $result->fetch_assoc();
+        $group_title = $result_array['group_title'];
+        ?>
 
-            if($member[$i]['member2'] != NULL)   
-                echo $member[$i]['member2'];
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-clock-o fa-fw"></i><b><?php echo " ".$group_title; ?></b></h3>
+            </div>
+            <div class="panel-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover table-striped">
+                        <thead style="background-color:#ffffff;">
+                            <tr>
+                                <th>Topic</th>
+                                <?php 
+                                    for($i=0;$i<$num;$i++)
+                                    {
+                                        $count = $i+1;
+                                        echo "<th>Member ".$count."</th>";
+                                    }
+                                ?>
 
-            if($member[$i]['member3'] != NULL)   
-                echo $member[$i]['member3'];
+                            </tr>
+                        </thead>
+                        <?php  
 
-            if($member[$i]['member4'] != NULL)   
-                echo $member[$i]['member4'];
+                        echo "<tbody>";
+                        for($i=0;$i<count($member);$i++)
+                        {
+                            echo"<tr>";
+                                echo "<td>".$member[$i]['topic']."</td>";
+                                if($member[$i]['member1'] != NULL)   
+                                    echo "<td>".$member[$i]['member1']."</td>";
+                                if($member[$i]['member2'] != NULL)   
+                                    echo "<td>".$member[$i]['member2']."</td>";
+                                if($member[$i]['member3'] != NULL)   
+                                    echo "<td>".$member[$i]['member3']."</td>";
+                                if($member[$i]['member4'] != NULL)   
+                                    echo "<td>".$member[$i]['member4']."</td>";
+                                if($member[$i]['member5'] != NULL)   
+                                    echo "<td>".$member[$i]['member5']."</td>";
+                            echo "</tr>";
+                        }
 
-            if($member[$i]['member5'] != NULL)   
-                echo $member[$i]['member5'];
-
-        }
-    ?>
+                        echo"</tbody>"
+                        ?>
+                    </table>
+                </div>
+            </div>
+            </div>
+        </div>
     </div>
 
-    <br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 <?php endblock() ?>

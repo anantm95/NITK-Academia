@@ -39,7 +39,7 @@
 			$result1 = $conn->query($sql1);
 
 			if($result1 == TRUE)
-				header("Location: admin.php");
+				header("Location: group_entry.php?group_id=".$group_id."&num_members=".$num_members);
 		}
 
 		else if($num_members == 2)
@@ -48,7 +48,7 @@
 			$result1 = $conn->query($sql1);
 
 			if($result1 == TRUE)
-				header("Location: admin.php");
+				header("Location: group_entry.php?group_id=".$group_id."&num_members=".$num_members);
 		}
 
 		else if($num_members == 3)
@@ -57,7 +57,7 @@
 			$result1 = $conn->query($sql1);
 
 			if($result1 == TRUE)
-				header("Location: admin.php");
+				header("Location: group_entry.php?group_id=".$group_id."&num_members=".$num_members);
 		}
 		
 
@@ -67,7 +67,7 @@
 			$result1 = $conn->query($sql1);
 
 			if($result1 == TRUE)
-				header("Location: admin.php");
+				header("Location: group_entry.php?group_id=".$group_id."&num_members=".$num_members);
 		}
 
 
@@ -77,7 +77,7 @@
 			$result1 = $conn->query($sql1);
 
 			if($result1 == TRUE)
-				header("Location: admin.php");
+				header("Location: group_entry.php?group_id=".$group_id."&num_members=".$num_members);
 		}
 
 
