@@ -53,7 +53,7 @@
         $option4 = $result_array["option4"];
         $option5 = $result_array["option5"];
 
-        echo "<h1> ".$vote_title."</h1>";
+        echo "<h2> ".$vote_title."</h2>";
         //echo $vote_id;
 
         $sqlcheck = "SELECT * from vote_check where email = '$user_email' and vote_id = '$vote_id'";
@@ -61,7 +61,12 @@
 
         if($result->num_rows > 0)
         {
-            echo "You have already cast your vote.";
+            echo "<br>";
+            echo "<center>";
+            echo "<img src='media/social16.png'/>";
+            echo "<br>";
+            echo "<h4>Thanks for voting!</h4>";
+            echo "</center>";
         }
 
         else
@@ -90,84 +95,92 @@
     </div>
     <div class="col-lg-4">
 
-    <h2> Current Count </h2>
+        <br>
 
-    <?php 
+        <div class="panel panel-info">
+        <div class="panel-heading">
+            <h3 class="panel-title"><i class="fa fa-clock-o fa-fw"></i><b> Current Count</b></h3>
+        </div>
+        <div class="panel-body">
 
-    $sql = "SELECT * from vote_details NATURAL JOIN vote_counts where vote_id='$vote_id'";
-    $result = $conn->query($sql);
-    $result_array = $result->fetch_assoc();
+            <?php 
 
-    $vote_title = $result_array["vote_title"];
-    $option1 = $result_array["option1"];
-    $option2 = $result_array["option2"];
-    $option3 = $result_array["option3"];
-    $option4 = $result_array["option4"];
-    $option5 = $result_array["option5"];
+            $sql = "SELECT * from vote_details NATURAL JOIN vote_counts where vote_id='$vote_id'";
+            $result = $conn->query($sql);
+            $result_array = $result->fetch_assoc();
 
-    $count1 = $result_array["count1"];
-    $count2 = $result_array["count2"];
-    $count3 = $result_array["count3"];
-    $count4 = $result_array["count4"];
-    $count5 = $result_array["count5"];
+            $vote_title = $result_array["vote_title"];
+            $option1 = $result_array["option1"];
+            $option2 = $result_array["option2"];
+            $option3 = $result_array["option3"];
+            $option4 = $result_array["option4"];
+            $option5 = $result_array["option5"];
 
-    if($option1 != NULL)
-    {
-        echo $option1;
-        echo ": ";
-        if ($count1 == -1)
-            echo "0";
-        else
-            echo $count1;
-        echo "<br><br>";
-    }
+            $count1 = $result_array["count1"];
+            $count2 = $result_array["count2"];
+            $count3 = $result_array["count3"];
+            $count4 = $result_array["count4"];
+            $count5 = $result_array["count5"];
 
-    if($option2 != NULL)
-    {
-        echo $option2;
-        echo ": ";
-        if ($count2 == -1)
-            echo "0";
-        else
-            echo $count2;
-        echo "<br><br>";
-    }
+            if($option1 != NULL)
+            {
+                echo $option1;
+                echo ": ";
+                if ($count1 == -1)
+                    echo "0";
+                else
+                    echo $count1;
+                echo "<br><br>";
+            }
 
-    if($option3 != NULL)
-    {
-        echo $option3;
-        echo ": ";
-        if ($count3 == -1)
-            echo "0";
-        else
-            echo $count3;
-        echo "<br><br>";
-    }
+            if($option2 != NULL)
+            {
+                echo $option2;
+                echo ": ";
+                if ($count2 == -1)
+                    echo "0";
+                else
+                    echo $count2;
+                echo "<br><br>";
+            }
 
-    if($option4 != NULL)
-    {
-        echo $option4;
-        echo ": ";
-        if ($count4 == -1)
-            echo "0";
-        else
-            echo $count4;
-        echo "<br><br>";
-    }
+            if($option3 != NULL)
+            {
+                echo $option3;
+                echo ": ";
+                if ($count3 == -1)
+                    echo "0";
+                else
+                    echo $count3;
+                echo "<br><br>";
+            }
 
-    if($option5 != NULL)
-    {
-        echo $option5;
-        echo ": ";
-        if ($count5 == -1)
-            echo "0";
-        else
-            echo $count5;
-        echo "<br><br>";
-    }
+            if($option4 != NULL)
+            {
+                echo $option4;
+                echo ": ";
+                if ($count4 == -1)
+                    echo "0";
+                else
+                    echo $count4;
+                echo "<br><br>";
+            }
+
+            if($option5 != NULL)
+            {
+                echo $option5;
+                echo ": ";
+                if ($count5 == -1)
+                    echo "0";
+                else
+                    echo $count5;
+                echo "<br><br>";
+            }
 
 
-    ?>
+            ?>
+        </div>
+        </div>
     </div>
 
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
