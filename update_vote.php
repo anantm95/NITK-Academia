@@ -43,24 +43,16 @@
 				$sqlUpdateCount = "UPDATE vote_counts SET count1 = 1 where vote_id = '$vote_id'";
 				$result = $conn->query($sqlUpdateCount);
 				
-				if($result == TRUE)
-				{
-					header("Location: cast_vote.php?vote_id=".$vote_id);
-				}
 			}
 			else
 			{
 				$sqlUpdateCount = "UPDATE vote_counts SET count1 = count1 + 1 where vote_id = '$vote_id'";
 				$result = $conn->query($sqlUpdateCount);
 				
-				if($result == TRUE)
-				{
-					header("Location: cast_vote.php?vote_id=".$vote_id);
-				}
 			}
 		}
 
-		if($chosen_option == 2)
+		else if($chosen_option == 2)
 		{
 			$sqlGetCount = "SELECT count2 from vote_counts where vote_id = '$vote_id'";
 			$result = $conn->query($sqlGetCount);
@@ -72,24 +64,16 @@
 				$sqlUpdateCount = "UPDATE vote_counts SET count2 = 1 where vote_id = '$vote_id'";
 				$result = $conn->query($sqlUpdateCount);
 				
-				if($result == TRUE)
-				{
-					header("Location: cast_vote.php?vote_id=".$vote_id);
-				}
 			}
 			else
 			{
 				$sqlUpdateCount = "UPDATE vote_counts SET count2 = count2 + 1 where vote_id = '$vote_id'";
 				$result = $conn->query($sqlUpdateCount);
 				
-				if($result == TRUE)
-				{
-					header("Location: cast_vote.php?vote_id=".$vote_id);
-				}
 			}
 		}
 
-		if($chosen_option == 3)
+		else if($chosen_option == 3)
 		{
 			$sqlGetCount = "SELECT count3 from vote_counts where vote_id = '$vote_id'";
 			$result = $conn->query($sqlGetCount);
@@ -101,24 +85,16 @@
 				$sqlUpdateCount = "UPDATE vote_counts SET count3 = 1 where vote_id = '$vote_id'";
 				$result = $conn->query($sqlUpdateCount);
 				
-				if($result == TRUE)
-				{
-					header("Location: cast_vote.php?vote_id=".$vote_id);
-				}
 			}
 			else
 			{
 				$sqlUpdateCount = "UPDATE vote_counts SET count3 = count3 + 1 where vote_id = '$vote_id'";
 				$result = $conn->query($sqlUpdateCount);
 				
-				if($result == TRUE)
-				{
-					header("Location: cast_vote.php?vote_id=".$vote_id);
-				}
 			}
 		}
 
-		if($chosen_option == 4)
+		else if($chosen_option == 4)
 		{
 			$sqlGetCount = "SELECT count4 from vote_counts where vote_id = '$vote_id'";
 			$result = $conn->query($sqlGetCount);
@@ -130,24 +106,16 @@
 				$sqlUpdateCount = "UPDATE vote_counts SET count4 = 1  where vote_id = '$vote_id'";
 				$result = $conn->query($sqlUpdateCount);
 				
-				if($result == TRUE)
-				{
-					header("Location: cast_vote.php?vote_id=".$vote_id);
-				}
 			}
 			else
 			{
 				$sqlUpdateCount = "UPDATE vote_counts SET count4 = count4 + 1 where vote_id = '$vote_id'";
 				$result = $conn->query($sqlUpdateCount);
 				
-				if($result == TRUE)
-				{
-					header("Location: cast_vote.php?vote_id=".$vote_id);
-				}
 			}
 		}
 
-		if($chosen_option == 5)
+		else if($chosen_option == 5)
 		{
 			$sqlGetCount = "SELECT count5 from vote_counts where vote_id = '$vote_id'";
 			$result = $conn->query($sqlGetCount);
@@ -159,21 +127,22 @@
 				$sqlUpdateCount = "UPDATE vote_counts SET count5 = 1 where vote_id = '$vote_id'";
 				$result = $conn->query($sqlUpdateCount);
 				
-				if($result == TRUE)
-				{
-					header("Location: cast_vote.php?vote_id=".$vote_id);
-				}
 			}
 			else
 			{
 				$sqlUpdateCount = "UPDATE vote_counts SET count5 = count5 + 1 where vote_id = '$vote_id'";
 				$result = $conn->query($sqlUpdateCount);
 				
-				if($result == TRUE)
-				{
-					header("Location: cast_vote.php?vote_id=".$vote_id);
-				}
 			}
+		}
+
+		$sqlcheckuser = "INSERT INTO vote_check VALUES ('$vote_id', '$class_user', '$user_email', 1)";
+		$resultcheck = $conn->query($sqlcheckuser);
+
+
+		if($result == TRUE && $resultcheck == TRUE)
+		{
+			header("Location: cast_vote.php?vote_id=".$vote_id);
 		}
 
 

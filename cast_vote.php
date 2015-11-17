@@ -56,23 +56,34 @@
         echo "<h1> ".$vote_title."</h1>";
         //echo $vote_id;
 
-        echo "<form action = 'update_vote.php?vote_id=".$vote_id."' method='post'>";
+        $sqlcheck = "SELECT * from vote_check where email = '$user_email' and vote_id = '$vote_id'";
+        $result = $conn->query($sqlcheck);
 
-        if($option1 != NULL)
-            echo"<input type='radio' name='chosenOption' value='1'/>"." ".$option1."</br>";
-        if($option2 != NULL)
-            echo"<input type='radio' name='chosenOption' value='2'/>"." ".$option2."</br>";
-        if($option3 != NULL)
-            echo"<input type='radio' name='chosenOption' value='3'/>"." ".$option3."</br>";
-        if($option4 != NULL)
-            echo"<input type='radio' name='chosenOption' value='4'/>"." ".$option4."</br>";
-        if($option5 != NULL)
-            echo"<input type='radio' name='chosenOption' value='5'/>"." ".$option5."</br>";
+        if($result->num_rows > 0)
+        {
+            echo "You have already cast your vote.";
+        }
 
-        echo "<br>";
+        else
+        {
+            echo "<form action = 'update_vote.php?vote_id=".$vote_id."' method='post'>";
 
-        echo"<button type='submit' id='submit' name='submit' class='btn btn-lg btn-success'>Vote</button>";
-        echo"</form>"
+            if($option1 != NULL)
+                echo"<input type='radio' name='chosenOption' value='1'/>"." ".$option1."</br>";
+            if($option2 != NULL)
+                echo"<input type='radio' name='chosenOption' value='2'/>"." ".$option2."</br>";
+            if($option3 != NULL)
+                echo"<input type='radio' name='chosenOption' value='3'/>"." ".$option3."</br>";
+            if($option4 != NULL)
+                echo"<input type='radio' name='chosenOption' value='4'/>"." ".$option4."</br>";
+            if($option5 != NULL)
+                echo"<input type='radio' name='chosenOption' value='5'/>"." ".$option5."</br>";
+
+            echo "<br>";
+
+            echo"<button type='submit' id='submit' name='submit' class='btn btn-lg btn-success'>Vote</button>";
+            echo"</form>";
+        }
     
     ?>
 
