@@ -63,7 +63,7 @@
                                         </div>
                                         <div class='col-xs-9 text-right'>
                                         
-                                        <div>".$vote[$i]['vote_title']."</div>
+                                        <h4>".$vote[$i]['vote_title']."</h4>
                                     </div>
                                 </div>
                             </div>

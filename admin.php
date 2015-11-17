@@ -187,6 +187,9 @@
             <h3>Voting</h3>
             <a class="btn btn-primary" href="new_vote_step1.php">Set Up a Vote</a>
 
+            <h3>Groups</h3>
+            <a class="btn btn-primary" href="new_group.php">Set Up a Group Formation</a>
+
             </div>
         </div>
         </div>

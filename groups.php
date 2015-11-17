@@ -37,4 +37,51 @@
 
 <?php startblock('body') ?>
 
+    <?php
+
+        $group = array(); 
+        $group_sql = "SELECT * from group_data where classname = '$class_user'";
+        $all_groups = $conn->query($group_sql);
+        while($row = $all_groups->fetch_assoc()) {
+            $group[] = $row;
+        }
+
+
+        if(count($group) == 0)
+            echo "No active votes";
+        else
+        { 
+            for($i=count($group)-1;$i>=0;$i--) {
+                
+                echo "<div class='col-lg-6'>
+                        <br>
+                        <div class='panel panel-primary'>
+                            <div class='panel-heading'>
+                                <div class='row'>
+                                    <div class='col-xs-3'>
+                                        <i class='fa fa-support fa-4x'></i>
+                                        </div>
+                                        <div class='col-xs-9 text-right'>
+                                        
+                                        <h4>".$group[$i]['group_title']."</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href='group_entry.php?group_id=".$group[$i]['group_id']."&num_members=".$group[$i]['num_members']."'>
+                                <div class='panel-footer'>
+                                    <span class='pull-left'>Form your group</span>
+                                    <span class='pull-right'><i class='fa fa-arrow-circle-right'></i></span>
+                                    <div class='clearfix'></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>";
+
+            }
+        }
+    
+    ?>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
 <?php endblock() ?>
