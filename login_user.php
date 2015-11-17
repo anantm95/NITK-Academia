@@ -19,11 +19,10 @@
 
 		if(isset($_POST['submit']))
 		{
-			$classname = $_POST['classname'];
 			$email = $_POST['email'];
 			$password =  $_POST['password'];
 
-			$sql1 = "SELECT * FROM user where email = '$email' and classname = '$classname'";
+			$sql1 = "SELECT * FROM user where email = '$email'";
 			$result = $conn->query($sql1);
 
 			if($result->num_rows > 0){

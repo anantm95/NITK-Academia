@@ -102,10 +102,6 @@
                             <form role="form" action = "login_user.php" method="post">
                                 <fieldset>
                                     <div class="form-group">
-                                        <label for="inputclassname">Class Name</label>
-                                        <input class="form-control" placeholder="Please enter your class name" name="classname">
-                                    </div>
-                                    <div class="form-group">
                                         <label for="inputemail">Email</label>
                                         <input class="form-control" placeholder="Please enter your email-id" name="email" type="email">
                                     </div>
