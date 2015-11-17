@@ -32,6 +32,7 @@
         $is_admin = 0;
 
     $group_id = $_GET['group_id'];
+    $num = $_GET['num_members'];
 
 ?>
 
@@ -45,15 +46,14 @@
                     <h3 class="panel-title">Enter your group details</h3>
                 </div>
                 <div class="panel-body">
-                    <form role="form" action = "group_update.php?group_id='$group_id" method="post">
+                    <?php echo"<form role='form' action = 'group_update.php?group_id=".$group_id."&num_members=".$num."' method='post'>"; ?>
                         <fieldset>
                             <div class="form-group">
                                 <label for="inputtopic">Topic</label>
-                                <input class="form-control" placeholder="Please enter the group title" name="group_title" type="text">
+                                <input class="form-control" placeholder="Please enter your selected" name="topic" type="text">
                             </div>
                             <?php
 
-                                $num = $_GET['num_members'];
                                 for($i=0;$i<$num;$i++)
                                 { ?>
                                 <div class="form-group">
