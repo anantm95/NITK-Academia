@@ -40,7 +40,8 @@
 
 <?php startblock('body') ?>
 
-        <div style="margin-top:50px;" class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+        <br>
+        <div class="col-md-4">
             <div class="login-panel panel panel-default">
                 <div class="panel-heading">
                     <h3 class="panel-title">Enter your group details</h3>
@@ -69,6 +70,37 @@
                 </div>
             </div>
         </div>
+
+    <div class="col-lg-8">
+    <?php
+
+        $member = array(); 
+        $data_sql = "SELECT * from group_data NATURAL JOIN group_members where group_id = '$group_id'";
+        $all_data = $conn->query($data_sql);
+        while($row = $all_data->fetch_assoc()) {
+            $member[] = $row;
+        }
+
+        for($i=0;$i<count($member);$i++)
+        {
+            echo $member[$i]['topic'];
+            if($member[$i]['member1'] != NULL)   
+                echo $member[$i]['member1'];
+
+            if($member[$i]['member2'] != NULL)   
+                echo $member[$i]['member2'];
+
+            if($member[$i]['member3'] != NULL)   
+                echo $member[$i]['member3'];
+
+            if($member[$i]['member4'] != NULL)   
+                echo $member[$i]['member4'];
+
+            if($member[$i]['member5'] != NULL)   
+                echo $member[$i]['member5'];
+
+        }
+    ?>
     </div>
 
     <br><br><br><br><br>
