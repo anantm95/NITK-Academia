@@ -52,50 +52,25 @@
         $option5 = $result_array["option5"];
 
         echo "<h1> ".$vote_title."</h1>";
+        //echo $vote_id;
+
+        echo "<form action = 'update_vote.php?vote_id=".$vote_id."' method='post'>";
 
         if($option1 != NULL)
-        {
-            echo "<div class='checkbox'>
-            <label>
-                <input type='checkbox' value=''>".$option1."
-            </label>
-            </div>";
-        }
+            echo"<input type='radio' name='chosenOption' value='1'/>"." ".$option1."</br>";
         if($option2 != NULL)
-        {
-            echo "<div class='checkbox'>
-                <label>
-                    <input type='checkbox' value=''>".$option2."
-                </label>
-            </div>";
-        }
-
+            echo"<input type='radio' name='chosenOption' value='2'/>"." ".$option2."</br>";
         if($option3 != NULL)
-        {
-            echo "<div class='checkbox'>
-                <label>
-                    <input type='checkbox' value=''>".$option3."
-                </label>
-            </div>";
-        }
-
+            echo"<input type='radio' name='chosenOption' value='3'/>"." ".$option3."</br>";
         if($option4 != NULL)
-        {
-            echo "<div class='checkbox'>
-                <label>
-                    <input type='checkbox' value=''>".$option4."
-                </label>
-            </div>";
-        }
-
+            echo"<input type='radio' name='chosenOption' value='4'/>"." ".$option4."</br>";
         if($option5 != NULL)
-        {
-            echo "<div class='checkbox'>
-                <label>
-                    <input type='checkbox' value=''>".$option5."
-                </label>
-            </div>";
-        }
+            echo"<input type='radio' name='chosenOption' value='5'/>"." ".$option5."</br>";
+
+        echo "<br>";
+
+        echo"<button type='submit' id='submit' name='submit' class='btn btn-lg btn-success'>Vote</button>";
+        echo"</form>"
     
     ?>
 

@@ -37,7 +37,15 @@
 			$sql1 = "INSERT INTO vote_details(vote_title, classname, option1) VALUES ('$vote_title', '$class_user', '$option1')";
 			$result1 = $conn->query($sql1);
 
-			if($result1 == TRUE)
+			$sqlid = "SELECT vote_id from vote_details where vote_title='$vote_title'";
+			$result = $conn->query($sqlid);
+			$result_array = $result->fetch_assoc();
+			$vote_id = $result_array["vote_id"];
+
+			$sqlcount = "INSERT INTO vote_counts(vote_id) VALUES ('$vote_id')";
+			$resultcount = $conn->query($sqlcount);
+
+			if($result1 == TRUE && $resultcount == TRUE)
 				header("Location: admin.php");
 		}
 		
@@ -46,7 +54,15 @@
 			$sql2 = "INSERT INTO vote_details(vote_title, classname, option1, option2) VALUES ('$vote_title', '$class_user', '$option1', '$option2')";
 			$result2 = $conn->query($sql2);
 
-			if($result2 == TRUE)
+			$sqlid = "SELECT vote_id from vote_details where vote_title='$vote_title'";
+			$result = $conn->query($sqlid);
+			$result_array = $result->fetch_assoc();
+			$vote_id = $result_array["vote_id"];
+
+			$sqlcount = "INSERT INTO vote_counts(vote_id) VALUES ('$vote_id')";
+			$resultcount = $conn->query($sqlcount);
+
+			if($result2 == TRUE && $resultcount == TRUE)
 				header("Location: admin.php");
 		}
 
@@ -55,7 +71,15 @@
 			$sql3 = "INSERT INTO vote_details(vote_title, classname, option1, option2, option3) VALUES ('$vote_title', '$class_user', '$option1', '$option2', '$option3')";
 			$result3 = $conn->query($sql3);
 
-			if($result3 == TRUE)
+			$sqlid = "SELECT vote_id from vote_details where vote_title='$vote_title'";
+			$result = $conn->query($sqlid);
+			$result_array = $result->fetch_assoc();
+			$vote_id = $result_array["vote_id"];
+
+			$sqlcount = "INSERT INTO vote_counts(vote_id) VALUES ('$vote_id')";
+			$resultcount = $conn->query($sqlcount);
+
+			if($result3 == TRUE && $resultcount == TRUE)
 				header("Location: admin.php");
 		}
 
@@ -64,7 +88,15 @@
 			$sql4 = "INSERT INTO vote_details(vote_title, classname, option1, option2, option3, option4) VALUES ('$vote_title', '$class_user', '$option1', '$option2', '$option3', '$option4')";
 			$result4 = $conn->query($sql4);
 
-			if($result4 == TRUE)
+			$sqlid = "SELECT vote_id from vote_details where vote_title='$vote_title'";
+			$result = $conn->query($sqlid);
+			$result_array = $result->fetch_assoc();
+			$vote_id = $result_array["vote_id"];
+
+			$sqlcount = "INSERT INTO vote_counts(vote_id) VALUES ('$vote_id')";
+			$resultcount = $conn->query($sqlcount);
+
+			if($result4 == TRUE && $resultcount == TRUE)
 				header("Location: admin.php");
 		}
 
@@ -73,7 +105,15 @@
 			$sql5 = "INSERT INTO vote_details(vote_title, classname, option1, option2, option3, option4, option5) VALUES ('$vote_title', '$class_user', '$option1', '$option2', '$option3', '$option4', '$option5')";
 			$result5 = $conn->query($sql5);
 
-			if($result5 == TRUE)
+			$sqlid = "SELECT vote_id from vote_details where vote_title='$vote_title'";
+			$result = $conn->query($sqlid);
+			$result_array = $result->fetch_assoc();
+			$vote_id = $result_array["vote_id"];
+
+			$sqlcount = "INSERT INTO vote_counts(vote_id) VALUES ('$vote_id')";
+			$resultcount = $conn->query($sqlcount);
+
+			if($result5 == TRUE && $resultcount == TRUE)
 				header("Location: admin.php");
 		}
 
