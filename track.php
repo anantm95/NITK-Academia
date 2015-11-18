@@ -55,7 +55,7 @@
                 //echo "<div class='col-lg-5' style='background-color:#B1c5cF; margin-right:30px; margin-left:45px; margin-bottom:20px; margin-top:20px; text-align:center;'";
                 echo "<div class='col-lg-6'>
                         <br>
-                        <div class='panel panel-green'>
+                        <div class='panel panel-danger'>
                             <div class='panel-heading'>
                                 <div class='row'>
                                     <div class='col-xs-3'>
@@ -69,7 +69,7 @@
                             </div>
                             <a href='test_entry.php?code=".$course[$i]['course_code']."'>
                                 <div class='panel-footer'>
-                                    <span class='pull-left'>View Details</span>
+                                    <span class='pull-left'>Track your performance</span>
                                     <span class='pull-right'><i class='fa fa-arrow-circle-right'></i></span>
                                     <div class='clearfix'></div>
                                 </div>

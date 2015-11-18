@@ -55,7 +55,7 @@
                 
                 echo "<div class='col-lg-6'>
                         <br>
-                        <div class='panel panel-primary'>
+                        <div class='panel panel-success'>
                             <div class='panel-heading'>
                                 <div class='row'>
                                     <div class='col-xs-3'>
