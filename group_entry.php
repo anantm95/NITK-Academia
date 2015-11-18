@@ -42,7 +42,7 @@
 
         <br>
         <div class="col-md-4">
-            <div class="login-panel panel panel-default">
+            <div class="login-panel panel panel-info">
                 <div class="panel-heading">
                     <h3 class="panel-title">Enter your group details</h3>
                 </div>
